@@ -11,6 +11,25 @@
     "sections": {
       "image_banner": {
         "type": "image-banner",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "title": "Purposefully Crafted <span>Designed for you</span>",
+            }
+          },
+          "button": {
+            "type": "button",
+            "settings": {
+              "btn1_label": "Shop the Collection",
+              "btn1_url": "shopify://collections/all"
+            }
+          }
+        },
+        "block_order": [
+          "heading",
+          "button"
+        ],
         "settings": {
           "padding_top": 0,
           "padding_bottom": 0
