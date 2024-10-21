@@ -61,10 +61,10 @@
       "name": "Description",
       "settings": [
         {
-          "type": "html",
+          "type": "richtext",
           "id": "rte",
           "label": "Heading",
-          "default": "Purposefully Crafted <span>Designed for you</span>"
+          "default": "<p>From humble beginnings to a global movement, GNJ was born out of a passion for empowering individuals through comfort and confidence. Every piece tells a story, and you are part of it.</p>"
         }
       ]
     },
@@ -91,6 +91,31 @@
           "id": "btn2_label",
           "label": "Button 2 label",
           "default": "Build a Bundle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Banner",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "title": "Purposefully Crafted <span>Designed for you</span>"
+          }
+        },
+        {
+          "type": "rte",
+          "settings": {
+            "rte": "<p>From humble beginnings to a global movement, GNJ was born out of a passion for empowering individuals through comfort and confidence. Every piece tells a story, and you are part of it.</p>"
+          }
+        },
+        {
+          "type": "button",
+          "settings": {
+            "btn1_label": "Shop the Collection"
+          }
         }
       ]
     }
