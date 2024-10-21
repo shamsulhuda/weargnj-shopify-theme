@@ -9,7 +9,23 @@
  */
 {
   "type": "header",
-  "name": "Group name",
-  "sections": {},
-  "order": []
+  "name": "Footer Group",
+  "sections": {
+    "main-footer": {
+      "type": "footer",
+      "settings": {
+        
+      }
+    },
+    "footer-bottom": {
+      "type": "footer-bottom",
+      "settings": {
+        
+      }
+    }
+  },
+  "order": [
+    "main-footer",
+    "footer-bottom"
+  ]
 }
