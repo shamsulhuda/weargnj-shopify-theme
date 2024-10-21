@@ -1,0 +1,47 @@
+{% style %}
+  #{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | append: 'px'}};
+    padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
+  }
+{% endstyle %}
+<div class="banner-section" id="{{ section.id }}">
+  
+</div>
+
+{% schema %}
+{
+  "name": "Banner",
+  "class": "main-banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner",
+      "label": "Banner image"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    }
+  ]
+}
+{% endschema %}
