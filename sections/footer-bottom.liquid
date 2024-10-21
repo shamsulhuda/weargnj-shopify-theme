@@ -4,6 +4,52 @@
     "enabled_on": {
       "groups": ["footer"]
     },
-    "settings": []
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      }
+    ],
+    "blocks": [
+      {
+        "type": "copyright",
+        "name": "Copyright",
+        "settings":[
+          {
+            "type": "liquid",
+            "id": "copyright_text",
+            "label": "Copyright text",
+            "default": "<p>All Rights reserved &copy;{{ shop.name }} | {{ 'now' | date: '%Y' }}</p>"
+          }
+        ]
+      },
+      {
+        "type": "payment",
+        "name": "Payment",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "payment_method",
+            "label": "Payment Image"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
