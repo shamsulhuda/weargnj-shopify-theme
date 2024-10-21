@@ -8,24 +8,27 @@
  * ------------------------------------------------------------
  */
 {
-  "type": "header",
-  "name": "Footer Group",
-  "sections": {
-    "main-footer": {
-      "type": "footer",
-      "settings": {
-        
+    "name": "Footer Group",
+    "type": "footer",
+    "sections": {
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-menu": {
+            "type": "footer-menu",
+            "settings": {
+              "menu": "footer-menu"
+            }
+          }
+        },
+        "block_order": [
+          "footer-menu"
+        ],
+        "settings": {
+        }
       }
     },
-    "footer-bottom": {
-      "type": "footer-bottom",
-      "settings": {
-        
-      }
-    }
-  },
-  "order": [
-    "main-footer",
-    "footer-bottom"
-  ]
-}
+    "order": [
+      "footer"
+    ]
+  }
