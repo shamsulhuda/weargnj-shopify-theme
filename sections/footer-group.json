@@ -8,44 +8,46 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "Footer Group",
-  "type": "footer",
-  "sections": {
-    "footer": {
-      "type": "footer",
-      "blocks": {
-        "footer-menu": {
-          "type": "footer-menu",
-          "settings": {
-            "menu": "footer-menu"
+    "name": "Footer Group",
+    "type": "footer",
+    "sections": {
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-menu": {
+            "type": "footer-menu",
+            "settings": {
+              "menu": "footer-menu"
+            }
           }
+        },
+        "block_order": [
+          "footer-menu"
+        ],
+        "settings": {
         }
       },
-      "block_order": [
-        "footer-menu"
-      ],
-      "settings": {
+      "footer-bottom": {
+        "type": "footer-bottom",
+        "blocks":{
+          "copyright": {
+            "type": "copyright",
+            "settings": {
+              "copyright_text": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
+            }
+          }
+        },
+        "block_order": [
+          "copyright"
+        ],
+        "settings": {
+          "padding_top": 10,
+          "padding_bottom": 10
+        }
       }
     },
-    "footer-bottom": {
-      "type": "footer-bottom",
-      "blocks": {
-        "copyright": {
-          "type": "copyright",
-          "settings": {
-            "copyright_text": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
-          }
-        }
-      },
-      "block_order": [
-        "copyright"
-      ],
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "footer",
-    "footer-bottom"
-  ]
-}
+    "order": [
+      "footer",
+      "footer-bottom"
+    ]
+  }
