@@ -40,6 +40,7 @@
  .single__collection__brief .common__btn {
 	 opacity: 0;
 	 visibility: hidden;
+     font-weight: 600;
 	 transition: var(--transition);
      width:130px;
 }
