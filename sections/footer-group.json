@@ -17,7 +17,7 @@
         "newsleter_7Pep4H": {
           "type": "newsleter",
           "settings": {
-            "column": 6,
+            "column": 5,
             "logo": "shopify://shop_images/Arabic_Logo_4x_1_1.png",
             "text": "<p>Join thousands who love our products. 98% would buy again!</p>",
             "enable_newsleter": true
@@ -42,7 +42,7 @@
         "information_qAz9iR": {
           "type": "information",
           "settings": {
-            "column": 2,
+            "column": 3,
             "heading": "Heading",
             "information": ""
           }
