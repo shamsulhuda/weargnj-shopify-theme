@@ -20,11 +20,17 @@
             </div>
           </div>
           {% when 'information' %}
-          <div class="col-md-4">
+          <div class="col-md-{{- block.settings.column -}}">
             <div class="rte">
               {{ block.settings.information }}
             </div>
           </div>
+          {% when 'newsleter' %}
+            <div class="col-md-{{- block.settings.column -}}">
+              <div class="rte">
+                {{ block.settings.information }}
+              </div>
+            </div>
           {% endcase %}
         {% endfor %}
       </div>
@@ -91,6 +97,13 @@
         "type": "newsleter",
         "name": "Newsleter",
         "settings": [
+          {
+            "type": "number",
+            "id": "column",
+            "label": "Column size",
+            "default": 4,
+            "info": "Total column length 12"
+          },
           {
             "type": "image_picker",
             "id": "logo",
