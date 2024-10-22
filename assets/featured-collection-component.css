@@ -1,4 +1,3 @@
-/* Best Seller/featured section */
 .weargnj__best__seller .best__seller__heading {
 	 font-weight: 600px;
 	 color: var(--primary-300);
@@ -76,7 +75,7 @@
 	 display: flex;
 	 gap: 15px;
 	 align-items: center;
-	 font-family: var(--font-heading-family);
+	 font-family: var(--recoleta);
 }
  .best__seller__item .best__seller__content .product__price .price .current__price {
 	 font-weight: 700;
@@ -93,7 +92,7 @@
 	 background-color: var(--common-black);
 	 border-radius: 25px;
 	 color: var(--common-white);
-	 font-family: var(--font-heading-family);
+	 font-family: var(--recoleta);
 }
  .best__seller__slider {
 	 position: relative;
@@ -105,3 +104,4 @@
 	 height: 100%;
 	 top: 50%;
 }
+ 
