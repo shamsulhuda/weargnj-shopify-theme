@@ -15,9 +15,9 @@
           <div class="col-lg-4">
               <div class="single__collection" style="background-image: url('{{ img }}');">
                   <div class="single__collection__brief">
-                      <h2 class="collection__title">Thong</h2>
+                      <h2 class="collection__title">{{ collection.title | default: 'Thong' }}</h2>
                       <form action="#">
-                          <a href="{{  }}" type="submit" class="common__btn fill__btn">Shop Brief</a>
+                          <a href="{{ collection.url | default:'#' }}" type="submit" class="common__btn fill__btn">Shop Brief</a>
                       </form>
                   </div>
               </div>
