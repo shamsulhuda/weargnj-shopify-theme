@@ -275,7 +275,8 @@
     {% endstyle %}
 
     {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
-    {{ 'swiper.min.css' | asset_url | stylesheet_tag }}
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
     {{ 'font-family.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     
@@ -378,7 +379,7 @@
     {%- endif -%}
 
     <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'swiper.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
