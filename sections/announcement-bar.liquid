@@ -6,13 +6,15 @@
   padding-top: {{ section.settings.padding_top | append:'px'}};
   padding-bottom: {{ section.settings.padding_bottom | append:'px'}};
   background-color: {{ section.settings.bg_color}};
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 .announcement-bar-inner a{
   color: #000;
 }
 {% endstyle %}
 <div class="announcement-bar">
-  <div class="container-fluid rounded-2">
+  <div class="container-fluid rounded-sm">
     <div class="announcement-bar-inner container-fluid text-center" id="announce_{{ section.id }}">
       {% for block in section.blocks %}
         <a href="{{ block.settings.link | default:'#' }}" class="rte">{{ block.settings.text }}</a>
