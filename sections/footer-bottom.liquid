@@ -5,17 +5,19 @@
 }
 {% endstyle %}
 <div class="footer-bottom" id="section_{{ section.id }}">
-  <div class="d-flex justify-content-space-between align-items-center">
-     {% for block in section.blocks %}
-       {% case block.type %}
-         {% when 'copyright' %}
-        <div class="content">{{ block.settings.copyright_text }}</div>
-         {% when 'payment' %}
-        {% if block.settings.payment_method != blank %}
-          {{ block.settings.payment_method | image_url: width: 300 | image_tag }}
-        {% endif %}
-      {% endcase %}
-    {% endfor %}
+  <div class="container">
+    <div class="d-flex justify-content-space-between align-items-center">
+       {% for block in section.blocks %}
+         {% case block.type %}
+           {% when 'copyright' %}
+          <div class="content">{{ block.settings.copyright_text }}</div>
+           {% when 'payment' %}
+          {% if block.settings.payment_method != blank %}
+            {{ block.settings.payment_method | image_url: width: 300 | image_tag }}
+          {% endif %}
+        {% endcase %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
