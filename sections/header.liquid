@@ -42,18 +42,18 @@
       <!-- Navbar items and dropdown -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menu 1
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Submenu 1</a></li>
-              <li><a class="dropdown-item" href="#">Submenu 2</a></li>
-            </ul>
-          </li>
           {% for link in links %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+          <li class="nav-item"{% if link.links.size > 1 %} dropdown{% endif %}>
+            <a class="nav-link{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
+              {{ link.title }}
+            </a>
+            {% if link.links.size > 1 %}
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
+              {% for child in link.links %}
+              <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
