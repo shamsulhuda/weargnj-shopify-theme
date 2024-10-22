@@ -1,6 +1,11 @@
 {{ 'featured-collection-component.css' | asset_url | stylesheet_tag }}
-
-<div class="weargnj__best__seller pt-5">
+{% style %}
+#featured_collection_{{ section.id }}{
+  padding-top: {{ section.settings.padding_top | append:'px'}};
+  padding-bottom: {{ section.settings.padding_bottom | append:'px'}};
+}
+{% endstyle %}
+<div class="weargnj__best__seller" id="featured_collection_{{ section.id }}">
   <div class="container-fluid">
       <div class="row">
           <h3 class="best__seller__heading text-center">Our Best Sellers</h3>
