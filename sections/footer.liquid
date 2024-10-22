@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row">
         {% for block in section.blocks %}
-          <div class="col-md-6">
+          {% case block.type %}
+          {% when 'footer-menu' %}
+          <div class="col-md-{{- block.settings.column -}}">
             <div class="heading">
               <h2>{{ block.settings.heading }}</h2>
             </div>
@@ -17,6 +19,9 @@
               </ul>
             </div>
           </div>
+          {% when 'information' %}
+          <div class="col-md-4"></div>
+          {% endcase %}
         {% endfor %}
       </div>
     </div>
@@ -34,6 +39,13 @@
         "type": "footer-menu",
         "name": "Footer Menu",
         "settings": [
+          {
+            "type": "number",
+            "id": "column",
+            "label": "Column size",
+            "default": 4,
+            "info": "Total column length 12"
+          },
           {
             "type": "text",
             "id": "heading",
