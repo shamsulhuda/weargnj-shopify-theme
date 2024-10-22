@@ -1,13 +1,25 @@
-<style>
-    .navbar-nav {
-      flex: 1;
-    }
+  <style>
     .navbar-brand {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
     }
-</style>
+    .navbar-collapse {
+      justify-content: space-between;
+    }
+    .right-icons {
+      display: flex;
+      gap: 15px;
+    }
+    @media (max-width: 768px) {
+      .navbar-brand {
+        position: relative;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
 <div class="header-area container-full">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -61,6 +73,11 @@
   "name": "Header",
   "class": "header-section",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
     {
       "type": "link_list",
       "id": "menu",
