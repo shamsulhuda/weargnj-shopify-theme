@@ -112,6 +112,12 @@
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+        --bg: #F1F0F0;
+        --common-white: #fff;
+        --primary-300: #23232A;
+        --primary-200: #595961;
+        --common-black: #000;
+        --transition: all 0.3s ease;
         {% else %}
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
