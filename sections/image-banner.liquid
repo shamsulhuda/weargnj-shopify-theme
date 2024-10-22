@@ -25,12 +25,19 @@
                 <h1>{{ block.settings.title }}</h1>
               </div>
               {% when 'rte' %}
-              <div class="heading">
-                <h1>{{  }}</h1>
+              <div class="rte">
+                {{ block.settings.rte }}
               </div>
               {% when 'button' %}
-              <div class="heading">
-                <h1>{{  }}</h1>
+              <div class="buttons">
+                <div class="d-flex">
+                  {% if block.settings.btn1_url %}
+                  <a href="{{ block.settings.btn1_url }}" class="btn btn-primary">{{ block.settings.btn1_label }}</a>
+                  {% endif %}
+                  {% if block.settings.btn2_url %}
+                  <a href="{{ block.settings.btn2_url }}" class="btn btn-primary">{{ block.settings.btn2_label }}</a>
+                  {% endif %}
+                </div>
               </div>
             {% endcase %}
             {% endfor %}
