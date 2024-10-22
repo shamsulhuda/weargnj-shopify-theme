@@ -1,4 +1,8 @@
-<div class="footer-section">
+#footer_{{ section.id }}{
+  padding-top: {{ section.settings.padding_top | append: 'px' }};
+  padding-bottom: {{ section.settings.padding_bottom | append: 'px' }};
+}
+<div class="footer-section" id="footer_{{ section.id }}">
   <div class="container-fluid">
     <div class="container">
       <div class="row">
@@ -76,7 +80,28 @@
     "enabled_on": {
       "groups": ["footer"]
     },
-    "settings": [],
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      }
+    ],
     "blocks": [
       {
         "type": "footer-menu",
