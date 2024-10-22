@@ -109,6 +109,13 @@
           "content": "t:settings_schema.typography.settings.header__1.content"
         },
         {
+          "type": "checkbox",
+          "id": "custom_font",
+          "label": "Enable Custom Font",
+          "default": true,
+          "info": "As custom font we're using 'Recoleta' for heading and 'Switzer' for body"
+        },
+        {
           "type": "font_picker",
           "id": "type_header_font",
           "default": "assistant_n4",
