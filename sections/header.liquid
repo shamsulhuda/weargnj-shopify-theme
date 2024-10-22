@@ -5,27 +5,29 @@
     <div class="header-nav">
         <div class="row">
           <div class="col-lg-4">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mx-auto">
-                {% for link in links %}
-                  <li class="nav-item"{% if link.links.size > 1 %} dropdown{% endif %}>
-                    <a class="nav-link{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
-                      {{ link.title }}
-                    </a>
-                    {% if link.links.size > 1 %}
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
-                      {% for child in link.links %}
-                      <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
-                      {% endfor %}
-                    </ul>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                  {% for link in links %}
+                    <li class="nav-item"{% if link.links.size > 1 %} dropdown{% endif %}>
+                      <a class="nav-link{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
+                        {{ link.title }}
+                      </a>
+                      {% if link.links.size > 1 %}
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
+                        {% for child in link.links %}
+                        <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </nav>
           </div>
           <div class="col-lg-4">
             <a class="navbar-brand d-none d-md-block" href="{{ routes.root_url }}">
