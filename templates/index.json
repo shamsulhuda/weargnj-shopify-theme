@@ -40,6 +40,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "build-a-bundle",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
