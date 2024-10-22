@@ -238,7 +238,7 @@
     background-color: rgba(var(--color-foreground), 0.2);
   }
   
-  .text-body{
+  .text-body,.rte{
     font-size: 1.5rem !important;
     letter-spacing: 0.06rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
