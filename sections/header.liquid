@@ -17,6 +17,8 @@
 }
 {% endstyle %}
 {% assign links = section.settings.menu.links %}
+{% assign button_index = section.settings.button_index %}
+{% assign custom_txt = section.settings.custom_txt %}
 <div class="header-area text-body transparent_header">
   <div class="container-fluid">
     <div class="header-nav px-5">
@@ -29,9 +31,9 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   {% for link in links %}
-                    <li class="nav-item{% if forloop.index == 2 %} bundle{% endif %}"{% if link.links.size > 1 %} dropdown{% endif %}>
+                    <li class="nav-item{% if forloop.index == button_index and button_index != blank %} custom_btn{% endif %}"{% if link.links.size > 1 %} dropdown{% endif %}>
                       <a class="nav-link{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
-                        {{ link.title }}
+                        {{ link.title }} {% if forloop.index == button_index and button_index != blank %}<span>{{ custom_txt }}</span>{% endif %}
                       </a>
                       {% if link.links.size > 1 %}
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
@@ -103,6 +105,19 @@
     {
       "type": "header",
       "content": "Settings"
+    },
+    {
+      "type": "number",
+      "id": "button_index",
+      "label": "Custom Button position",
+      "info": "Insert the number you want to show custom button in the Navigation",
+      "default": 2
+    },
+    {
+      "type": "text",
+      "id": "custom_txt",
+      "label": "Custom Button text",
+      "default": "4 for 15% off"
     },
     {
       "type": "range",
