@@ -40,48 +40,50 @@
           </div>
           {% when 'newsleter' %}
             <div class="col-md-{{- block.settings.column -}}">
-              <div class="brand-logo">
+              <div class="newslater-inner">
+                <div class="brand-logo">
                 {%- if block.settings.logo != blank -%}
-                <div class="header__heading-logo-wrapper">
-                  {%- assign logo_alt = block.settings.logo.alt | default: shop.name | escape -%}
-                  {%- assign logo_height = settings.logo_width | divided_by: block.settings.logo.aspect_ratio -%}
-                  {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                  {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                  {{ block.settings.logo | image_url: width: 600 | image_tag:
-                    class: 'header__heading-logo motion-reduce',
-                    widths: widths,
-                    height: logo_height,
-                    width: settings.logo_width,
-                    alt: logo_alt,
-                    sizes: sizes,
-                    preload: true
-                  }}
+                  <div class="header__heading-logo-wrapper">
+                    {%- assign logo_alt = block.settings.logo.alt | default: shop.name | escape -%}
+                    {%- assign logo_height = settings.logo_width | divided_by: block.settings.logo.aspect_ratio -%}
+                    {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+                    {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                    {{ block.settings.logo | image_url: width: 600 | image_tag:
+                      class: 'header__heading-logo motion-reduce',
+                      widths: widths,
+                      height: logo_height,
+                      width: settings.logo_width,
+                      alt: logo_alt,
+                      sizes: sizes,
+                      preload: true
+                    }}
+                  </div>
+                {%- else -%}
+                  <span class="h2">{{ shop.name }}</span>
+                {%- endif -%}
                 </div>
-              {%- else -%}
-                <span class="h2">{{ shop.name }}</span>
-              {%- endif -%}
+                <div class="rte my-3">
+                  {{ block.settings.text }}
+                </div>
+                {% if block.settings.enable_newsleter %}
+                <div class="footer-newsletter">
+                  <form action="#">
+                    <div class="input-group mb-2 mr-sm-2">                      
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <button class="common__btn fill__btn" type="button">→</button>
+                          </div>
+                        </div>                      
+                      </div>
+                    <label>
+                      <input type="checkbox" name="checkbox" class="check-box" checked>      
+                      <span>I accept the terms of the newsletter</span>
+                    </label>
+                  </form>
+                </div>
+                {% endif %}
               </div>
-              <div class="rte my-3">
-                {{ block.settings.text }}
-              </div>
-              {% if block.settings.enable_newsleter %}
-              <div class="footer-newsletter">
-                <form action="#">
-                  <div class="input-group mb-2 mr-sm-2">                      
-                      <input type="email" class="form-control" id="email" placeholder="Email">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <button class="common__btn fill__btn" type="button">→</button>
-                        </div>
-                      </div>                      
-                    </div>
-                  <label>
-                    <input type="checkbox" name="checkbox" class="check-box" checked>      
-                    <span>I accept the terms of the newsletter</span>
-                  </label>
-                </form>
-              </div>
-              {% endif %}
             </div>
           {% endcase %}
         {% endfor %}
