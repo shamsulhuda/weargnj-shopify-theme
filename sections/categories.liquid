@@ -11,12 +11,13 @@
             {% else %}
               {% assign img = 'https://cdn.shopify.com/s/files/1/0659/9196/6896/files/image-default.png?v=1729585373' %}
             {% endif %}
+            {% assign collection = block.settings.collection %}
           <div class="col-lg-4">
               <div class="single__collection" style="background-image: url('{{ img }}');">
                   <div class="single__collection__brief">
                       <h2 class="collection__title">Thong</h2>
                       <form action="#">
-                          <button type="submit" class="common__btn fill__btn">Shop Brief</button>
+                          <a href="{{  }}" type="submit" class="common__btn fill__btn">Shop Brief</a>
                       </form>
                   </div>
               </div>
