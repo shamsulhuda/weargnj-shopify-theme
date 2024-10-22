@@ -20,6 +20,7 @@
       }
     }
   </style>
+{% assign links = section.settings.menu.links %}
 <div class="header-area text-body">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -50,12 +51,11 @@
               <li><a class="dropdown-item" href="#">Submenu 2</a></li>
             </ul>
           </li>
+          {% for link in links %}
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu 2</a>
+            <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu 3</a>
-          </li>
+          {% endfor %}
         </ul>
   
         <!-- Right side icons: cart, account, search -->
