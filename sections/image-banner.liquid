@@ -15,7 +15,28 @@
 <div class="banner-section" id="banner_{{ section.id }}">
   <div class="container-fluid">
     <div class="main-banner">
-      <h1>Banner</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'heading' %}
+              <div class="heading">
+                <h1>{{ block.settings.title }}</h1>
+              </div>
+              {% when 'rte' %}
+              <div class="heading">
+                <h1>{{  }}</h1>
+              </div>
+              {% when 'button' %}
+              <div class="heading">
+                <h1>{{  }}</h1>
+              </div>
+            {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
