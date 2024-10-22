@@ -2207,6 +2207,9 @@
   .utility-bar .localization-wrapper .disclosure__link {
     font-size: calc(var(--font-heading-scale) * 1.3rem);
   }
+  .container-fluid {
+      max-width: 1325px;
+  }
   
   @media screen and (min-width: 990px) {
     body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
