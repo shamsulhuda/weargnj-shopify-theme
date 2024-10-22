@@ -1,3 +1,4 @@
+{{ 'banner-component.css' | asset_url | stylesheet_tag }}
 {% style %}
   #banner_{{ section.id }}{
     padding-top: {{ section.settings.padding_top | append: 'px'}};
@@ -12,16 +13,7 @@
     background-position: center;
     background-size: cover;
   }
-  .main-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.3); /* Adjust the color and opacity */
-      z-index: 1;
-    }
+  
   #banner_{{ section.id }} .banner__content {
       position: relative;
       z-index: 2;
@@ -29,28 +21,6 @@
   }
   #banner_{{ section.id }} .banner__content h1 {
     color: #FFFFFF;
-  }
-  .banner__content .rte{
-    color: #ffffff;
-  }
-  .banner__content .heading h1{
-    font-size: 80px;
-    font-weight: 800;
-  }
-  .banner__content .heading h1 > span {
-      font-weight: 500;
-  }
-  .common__btn{
-    padding: 12px 24px;
-    border: 1px solid #FFFFFF;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: var(--font-heading-family);
-  }
-  .common__btn.fill__btn{
-    background-color: #ffffff;
-    color: #000000;
   }
 {% endstyle %}
 <div class="banner-section" id="banner_{{ section.id }}">
