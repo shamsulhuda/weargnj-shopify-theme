@@ -5,11 +5,44 @@
   }
 {% endstyle %}
 <div class="quality-section" id="quality_{{ section.id }}">
-  Quality Section
-  {% for block in section.blocks %}
-    {% assign size = block.settings.size | default: 24 %}
-  {% render 'icons', icon: block.settings.icon, size: size %}
-  {% endfor %}
+  <div class="container-fluid">
+    <div class="d-flex">
+      {% for block in section.blocks %}
+        {% assign size = block.settings.size | default: 24 %}
+        <div class="d-flex">
+          <span>
+            {% render 'icons', icon: block.settings.icon, size: size %}            
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>  
+  <div class="weargnj__feature">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="feature__wrapper">
+                <div class="feature__bloc">
+                    <img src="assets/icons/package-check.svg" alt="">
+                    <span>90-Day Quality Guarantee - Love it or it’s on us</span>
+                </div>
+                <div class="feature__bloc">
+                    <img src="assets/icons/size.svg" alt="">
+                    <span>True to size fit guarantee</span>
+                </div>
+                <div class="feature__bloc">
+                    <img src="assets/icons/fabric.svg" alt="">
+                    <span>Premium sustainable fabric</span>
+                </div>
+                <div class="feature__bloc">
+                    <img src="assets/icons/origin.svg" alt="">
+                    <span>Made in UAE</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 {% schema %}
   {
