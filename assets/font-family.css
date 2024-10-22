@@ -1,8 +1,7 @@
 @font-face {
-  font-family: recoleta;
-  src: url('https://cdn.shopify.com/s/files/1/0659/9196/6896/files/recoleta-regulardemo.otf?v=1729570783')
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: recoleta !important;
+  font-family: Recoleta;
+  src: url('https://cdn.shopify.com/s/files/1/0659/9196/6896/files/recoleta-regulardemo.otf?v=1729570783');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
