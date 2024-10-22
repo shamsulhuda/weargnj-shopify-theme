@@ -17,7 +17,7 @@
         "newsleter_7Pep4H": {
           "type": "newsleter",
           "settings": {
-            "column": 4,
+            "column": 3,
             "logo": "shopify://shop_images/Arabic_Logo_4x_1_1.png",
             "text": "<p>Join thousands who love our products. 98% would buy again!</p>",
             "enable_newsleter": true
@@ -26,24 +26,38 @@
         "footer-menu": {
           "type": "footer-menu",
           "settings": {
+            "column": 3,
+            "heading": "Heading",
             "menu": "footer"
           }
         },
         "footer_menu_J3DUeV": {
           "type": "footer-menu",
           "settings": {
-            "column": 4,
+            "column": 3,
             "heading": "Heading",
             "menu": "footer"
+          }
+        },
+        "information_qAz9iR": {
+          "type": "information",
+          "settings": {
+            "column": 3,
+            "heading": "Heading",
+            "information": ""
           }
         }
       },
       "block_order": [
         "newsleter_7Pep4H",
         "footer-menu",
-        "footer_menu_J3DUeV"
+        "footer_menu_J3DUeV",
+        "information_qAz9iR"
       ],
       "settings": {
+        "bg_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 0
       }
     },
     "footer-bottom": {
