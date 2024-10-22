@@ -30,7 +30,9 @@
       </button>
   
       <!-- Navbar brand (logo) in the center -->
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#">
+        {{ section.settings.logo | image_url: width:150 | image_tag }}
+      </a>
   
       <!-- Navbar items and dropdown -->
       <div class="collapse navbar-collapse" id="navbarNav">
