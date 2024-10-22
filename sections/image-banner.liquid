@@ -3,7 +3,7 @@
     padding-top: {{ section.settings.padding_top | append: 'px'}};
     padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
   }
-  {
+   #banner_{{ section.id }} .main-banner{
     background-image: url('{{ section.settings.banner | img_url:'original' }}');
     height: 500px;
     background-repeat: no-repeat;
