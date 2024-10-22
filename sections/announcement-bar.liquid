@@ -1,6 +1,6 @@
 {% style %}
 #announce_{{ section.id }}{
-  {% if shop.name != 'index' %}
+  {% if template.name != 'index' %}
     display: none;
   {% endif %}
   padding-top: {{ section.settings.padding_top | append:'px'}};
