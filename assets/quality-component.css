@@ -1,0 +1,19 @@
+.weargnj__feature {
+	 margin-top: 15px;
+	 background-color: #e7e4e5;
+	 padding: 20px 40px;
+	 border-radius: 16px;
+}
+ .weargnj__feature .feature__wrapper {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+}
+ .weargnj__feature .feature__wrapper .feature__bloc {
+	 display: flex;
+	 gap: 10px;
+	 align-items: center;
+	 max-width: max-content;
+	 color: var(--primary-300);
+}
+ 
