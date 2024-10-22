@@ -1,5 +1,5 @@
 $('.swiper-wrapper').slick({
   infinite: true,
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1
 });
