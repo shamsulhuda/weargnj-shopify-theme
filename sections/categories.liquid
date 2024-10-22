@@ -1,6 +1,12 @@
 {{ 'category-components.css' | asset_url | stylesheet_tag }}
+{% style %}
+#category_{{ section.id }}{
+  padding-top: {{ section.settings.padding_top | append:'px'}};
+  padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
+}
+{% endstyle %}
 <div class="weargnj__collection pt-5">
-  <div class="container-fluid">
+  <div class="container-fluid" id="category_{{ section.id }}">
       <div class="row">
           <h1 class="best__seller__heading text-center heading mb-5">{{ section.settings.title | default:'Our Collections' }}</h1>
       </div>
@@ -34,6 +40,26 @@
         "id": "title",
         "label": "Heading",
         "default": "Our Collections"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 10
       }
     ],
     "blocks": [
