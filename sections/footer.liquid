@@ -1,5 +1,13 @@
 <div class="footer-section">
-  Footer
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          <div class="col-md-6"></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 {% schema %}
   {
@@ -28,6 +36,29 @@
             "type": "html",
             "id": "information",
             "label": "Select Menu"
+          }
+        ]
+      },
+      {
+        "type": "newsleter",
+        "name": "Newsleter",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Brand logo"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Join thousands who love our products. 98% would buy again!</p>"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_newsleter",
+            "label": "Enable Newsleter",
+            "default": true
           }
         ]
       }
