@@ -109,7 +109,7 @@
           "id": "custom_font",
           "label": "Enable Custom Font",
           "default": true,
-          "info": "As custom font we're using 'Recoleta' for heading and 'Switzer' for body. Also, other things like- Font size, style will follows as below!"
+          "info": "As custom font we're using 'Recoleta' for heading and 'Switzer' for body. Also, Font size, style scale will follows as below!"
         },
         {
           "type": "header",
