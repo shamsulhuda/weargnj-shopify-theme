@@ -4,7 +4,18 @@
       <div class="row">
         {% for block in section.blocks %}
           <div class="col-md-6">
-            
+            <div class="heading">
+              <h2>{{ block.settings.heading }}</h2>
+            </div>
+            <div class="content">
+              <ul>
+                {% for link in block.settings.menu.links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
         {% endfor %}
       </div>
