@@ -5,6 +5,8 @@
   padding-bottom: {{ section.settings.padding_bottom | append:'px'}};
 }
 {% endstyle %}
+
+{% assign products = section.settings.collection.products %}
 <div class="weargnj__best__seller" id="featured_collection_{{ section.id }}">
   <div class="container-fluid">
       <div class="row">
@@ -15,80 +17,65 @@
               <div class="swiper-wrapper">
                   <div class="swiper-slide">
                       <div class="best__seller__item">
+                        {% for product in products %}
                           <div class="best__seller__thumb">
                               <a href="product-details.html">
-                                  <img src="assets/img/best-seller/1.png" alt="">
+                                  <img src="{{ product.featured_image | img_url:'medium' }}" alt="{{ product.title }}">
                               </a>
                               <div class="special__tags">
                                   <div class="best-seller">
-                                      <img src="assets/icons/best.svg" alt="">
+                                      <span class="icon">
+                                        {% render 'icons', icon: 'verified-check', size: 16 %}
+                                      </span>
                                       <span>Best Seller</span>
                                   </div>
                                   <div class="bundle">
-                                      <img src="assets/icons/gift.svg" alt="">
+                                      <span class="icon">
+                                        {% render 'icons', icon: 'gift', size: 16 %}
+                                      </span>
                                       <span>Bundle</span>
                                   </div>
                               </div>
                           </div>
-                          <div class="best__seller__content">
-                              <h6><a href="product-details.html">The Elegant Classic Brief</a></h6>
-                              
-                              <div class="product__meta">
-                                  <div class="size">
-                                      <img src="assets/icons/comfort.svg" alt="">
-                                      <span>Seamless Comfort</span>
-                                  </div>
-                                  <div class="fabric">
-                                      <img src="assets/icons/fit.svg" alt="">
-                                      <span>Shaping Fit</span>
-                                  </div>
-                              </div>
-                              <div class="product__price">
-                                  <div class="price">
-                                      <span class="current__price">$120.00</span>
-                                      <span class="old__price">$150.00</span>
-                                  </div>
-                                  <form action="#">
-                                      <button type="submit" class="cart__btn">Add To Cart</button>
-                                  </form>
-                              </div>
-                          </div>
+                          {% endfor %}
                       </div>
                   </div>
-
+                  {% for product in products %}
                   <div class="swiper-slide">
                       <div class="best__seller__item">
                           <div class="best__seller__thumb">
                               <a href="product-details.html">
-                                  <img src="assets/img/best-seller/1.png" alt="">
+                                  <img src="{{ product.featured_image | img_url:'medium' }}" alt="{{ product.title }}">
                               </a>
                               <div class="special__tags">
                                   <div class="best-seller">
-                                      <img src="assets/icons/best.svg" alt="">
+                                      <span class="icon">
+                                        {% render 'icons', icon: 'verified-check', size: 16 %}
+                                      </span>
                                       <span>Best Seller</span>
                                   </div>
                                   <div class="bundle">
-                                      <img src="assets/icons/gift.svg" alt="">
-                                      <span>Bundle</span>
+                                      <span class="icon">
+                                        {% render 'icons', icon: 'verified-check', size: 16 %}
+                                      </span>
+                                      <span>Best Seller</span>
                                   </div>
                               </div>
                           </div>
                           <div class="best__seller__content">
-                              <h6><a href="product-details.html">The Elegant Classic Brief</a></h6>
+                              <h6><a href="product-details.html">{{ product.title | escape }}</a></h6>
                               
                               <div class="product__meta">
-                                  <div class="size">
-                                      <img src="assets/icons/comfort.svg" alt="">
+                                  <div class="size">                                      
                                       <span>Seamless Comfort</span>
                                   </div>
                                   <div class="fabric">
-                                      <img src="assets/icons/fit.svg" alt="">
                                       <span>Shaping Fit</span>
                                   </div>
                               </div>
                               <div class="product__price">
                                   <div class="price">
-                                      <span class="current__price">$120.00</span>
+                                      <span class="current__price">{{ product.price | money }}</span>
                                       <span class="old__price">$150.00</span>
                                   </div>
                                   <form action="#">
@@ -98,93 +85,7 @@
                           </div>
                       </div>
                   </div>
-
-                  <div class="swiper-slide">
-                      <div class="best__seller__item">
-                          <div class="best__seller__thumb">
-                              <a href="product-details.html">
-                                  <img src="assets/img/best-seller/1.png" alt="">
-                              </a>
-                              <div class="special__tags">
-                                  <div class="best-seller">
-                                      <img src="assets/icons/best.svg" alt="">
-                                      <span>Best Seller</span>
-                                  </div>
-                                  <div class="bundle">
-                                      <img src="assets/icons/gift.svg" alt="">
-                                      <span>Bundle</span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="best__seller__content">
-                              <h6><a href="product-details.html">The Elegant Classic Brief</a></h6>
-                              
-                              <div class="product__meta">
-                                  <div class="size">
-                                      <img src="assets/icons/comfort.svg" alt="">
-                                      <span>Seamless Comfort</span>
-                                  </div>
-                                  <div class="fabric">
-                                      <img src="assets/icons/fit.svg" alt="">
-                                      <span>Shaping Fit</span>
-                                  </div>
-                              </div>
-                              <div class="product__price">
-                                  <div class="price">
-                                      <span class="current__price">$120.00</span>
-                                      <span class="old__price">$150.00</span>
-                                  </div>
-                                  <form action="#">
-                                      <button type="submit" class="cart__btn">Add To Cart</button>
-                                  </form>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                      <div class="best__seller__item">
-                          <div class="best__seller__thumb">
-                              <a href="product-details.html">
-                                  <img src="assets/img/best-seller/1.png" alt="">
-                              </a>
-                              <div class="special__tags">
-                                  <div class="best-seller">
-                                      <img src="assets/icons/best.svg" alt="">
-                                      <span>Best Seller</span>
-                                  </div>
-                                  <div class="bundle">
-                                      <img src="assets/icons/gift.svg" alt="">
-                                      <span>Bundle</span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="best__seller__content">
-                              <h6><a href="product-details.html">The Elegant Classic Brief</a></h6>
-                              
-                              <div class="product__meta">
-                                  <div class="size">
-                                      <img src="assets/icons/comfort.svg" alt="">
-                                      <span>Seamless Comfort</span>
-                                  </div>
-                                  <div class="fabric">
-                                      <img src="assets/icons/fit.svg" alt="">
-                                      <span>Shaping Fit</span>
-                                  </div>
-                              </div>
-                              <div class="product__price">
-                                  <div class="price">
-                                      <span class="current__price">$120.00</span>
-                                      <span class="old__price">$150.00</span>
-                                  </div>
-                                  <form action="#">
-                                      <button type="submit" class="cart__btn">Add To Cart</button>
-                                  </form>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
+                  {% endfor %}
               </div>
               <div class="slider__control">
                   <div class="weargnj__next">1</div>
