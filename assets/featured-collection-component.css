@@ -3,6 +3,11 @@
 	 color: var(--primary-300);
 	 margin-bottom: 50px;
 }
+.best__seller__content h3 a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
  .best__seller__item {
 	 max-width: max-content;
 }
