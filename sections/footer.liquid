@@ -20,7 +20,11 @@
             </div>
           </div>
           {% when 'information' %}
-          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="rte">
+              {{ block.settings.information }}
+            </div>
+          </div>
           {% endcase %}
         {% endfor %}
       </div>
@@ -63,6 +67,19 @@
         "type": "information",
         "name": "Information",
         "settings": [
+          {
+            "type": "number",
+            "id": "column",
+            "label": "Column size",
+            "default": 4,
+            "info": "Total column length 12"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
           {
             "type": "html",
             "id": "information",
