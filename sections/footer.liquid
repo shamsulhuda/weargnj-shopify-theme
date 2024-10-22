@@ -1,3 +1,4 @@
+{% style %}
 #footer_{{ section.id }}{
   padding-top: {{ section.settings.padding_top | append: 'px' }};
   padding-bottom: {{ section.settings.padding_bottom | append: 'px' }};
@@ -5,6 +6,7 @@
 #footer_{{ section.id }} .container{
   background-color: {{ section.settings.bg_color }};
 }
+{% endstyle %}
 <div class="footer-section" id="footer_{{ section.id }}">
   <div class="container-fluid">
     <div class="container">
