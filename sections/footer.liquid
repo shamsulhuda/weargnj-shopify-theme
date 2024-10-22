@@ -48,9 +48,21 @@
                 <span class="h2">{{ shop.name }}</span>
               {%- endif -%}
               </div>
-              <div class="rte">
+              <div class="rte my-3">
                 {{ block.settings.information }}
               </div>
+              {% if block.settings.enable_newsleter %}
+              <div class="footer-newsletter">
+                <form action="#">
+                  <div class="input-group mb-2 mr-sm-2">                      
+                      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                      </div>
+                    </div>
+                </form>
+              </div>
+              {% endif %}
             </div>
           {% endcase %}
         {% endfor %}
