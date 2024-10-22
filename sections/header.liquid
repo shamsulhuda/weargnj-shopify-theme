@@ -1,4 +1,11 @@
 {{ 'header-component.css' | asset_url | stylesheet_tag }}
+{% style %}
+ .header-area {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+{% endstyle %}
 {% assign links = section.settings.menu.links %}
 <div class="header-area text-body">
   <div class="container-fluid">
