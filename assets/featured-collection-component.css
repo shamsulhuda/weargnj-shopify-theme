@@ -86,6 +86,7 @@
 	 font-weight: 700;
 	 color: var(--primary-300);
 	 font-size: 24px;
+     font-family: var(--font-heading-family);
 }
  .best__seller__item .best__seller__content .product__price .price .old__price {
 	 font-size: 18px;
