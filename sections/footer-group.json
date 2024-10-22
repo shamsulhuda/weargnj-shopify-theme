@@ -8,46 +8,66 @@
  * ------------------------------------------------------------
  */
 {
-    "name": "Footer Group",
-    "type": "footer",
-    "sections": {
-      "footer": {
-        "type": "footer",
-        "blocks": {
-          "footer-menu": {
-            "type": "footer-menu",
-            "settings": {
-              "menu": "footer-menu"
-            }
+  "name": "Footer Group",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "newsleter_7Pep4H": {
+          "type": "newsleter",
+          "settings": {
+            "column": 4,
+            "logo": "shopify://shop_images/Arabic_Logo_4x_1_1.png",
+            "text": "<p>Join thousands who love our products. 98% would buy again!</p>",
+            "enable_newsleter": true
           }
         },
-        "block_order": [
-          "footer-menu"
-        ],
-        "settings": {
+        "footer-menu": {
+          "type": "footer-menu",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "footer_menu_J3DUeV": {
+          "type": "footer-menu",
+          "settings": {
+            "column": 4,
+            "heading": "Heading",
+            "menu": "footer"
+          }
         }
       },
-      "footer-bottom": {
-        "type": "footer-bottom",
-        "blocks":{
-          "copyright": {
-            "type": "copyright",
-            "settings": {
-              "copyright_text": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
-            }
-          }
-        },
-        "block_order": [
-          "copyright"
-        ],
-        "settings": {
-          "padding_top": 10,
-          "padding_bottom": 10
-        }
+      "block_order": [
+        "newsleter_7Pep4H",
+        "footer-menu",
+        "footer_menu_J3DUeV"
+      ],
+      "settings": {
       }
     },
-    "order": [
-      "footer",
-      "footer-bottom"
-    ]
-  }
+    "footer-bottom": {
+      "type": "footer-bottom",
+      "blocks": {
+        "copyright": {
+          "type": "copyright",
+          "settings": {
+            "copyright_text": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
+          }
+        }
+      },
+      "block_order": [
+        "copyright"
+      ],
+      "settings": {
+        "enable_dash": true,
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "footer-bottom"
+  ]
+}
