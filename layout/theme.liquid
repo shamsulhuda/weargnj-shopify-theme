@@ -275,6 +275,7 @@
     {% endstyle %}
 
     {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper.min.css' | asset_url | stylesheet_tag }}
     {{ 'font-family.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     
@@ -377,5 +378,6 @@
     {%- endif -%}
 
     <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'swiper.min.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
