@@ -40,7 +40,10 @@
                           <h3><a href="product-details.html">{{ product.title | escape }}</a></h3>
                           
                           <div class="product__meta">
-                              <div class="size">                                      
+                              <div class="size">
+                                  <span class="icon">
+                                    {% render 'icons', icon: block.settings.icon, size: size %}            
+                                  </span>
                                   <span>Seamless Comfort</span>
                               </div>
                               <div class="fabric">
