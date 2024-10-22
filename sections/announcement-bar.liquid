@@ -1,4 +1,8 @@
-<div class="announcement-bar" id="{{ section.id }}">
+#announce_{{ section.id }}{
+  padding-top: {{ section.settings.padding_top | append:'px'}};
+  padding-bottom: {{ section.settings.padding_bottom | append:'px'}};
+}
+<div class="announcement-bar" id="announce_{{ section.id }}">
   <div class="announcement-bar-inner">
     {% for block in section.blocks %}
       <a href="{{ block.settings.link | default:'#' }}">{{ block.settings.text }}</a>
@@ -15,7 +19,30 @@
         "groups": ["header"]
       },
       "settings": [
-        
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Padding top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Padding bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        }
       ],
       "blocks": [
         {
