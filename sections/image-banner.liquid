@@ -11,13 +11,18 @@
     background-position: center;
     background-size: cover;
   }
+  #banner_{{ section.id }} .banner__content {
+      position: relative;
+      z-index: 1;
+      padding: 165px 45px 55px 45px;
+  }
 {% endstyle %}
 <div class="banner-section" id="banner_{{ section.id }}">
   <div class="container-fluid">
     <div class="main-banner">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-8">
+          <div class=".banner__content">
             {% for block in section.blocks %}
             {% case block.type %}
               {% when 'heading' %}
