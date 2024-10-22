@@ -3595,4 +3595,9 @@
       transform: translateX(100%) scaleX(0);
     }
   }
+
+h1.heading {
+  font-weight: 800;
+  font-family: var(--font-heading-family);  
+}
   
