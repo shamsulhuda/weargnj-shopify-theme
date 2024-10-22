@@ -18,6 +18,12 @@
             "title": "Purposefully Crafted <br><span>Designed for you</span>"
           }
         },
+        "rte_X4T788": {
+          "type": "rte",
+          "settings": {
+            "rte": "<p>From humble beginnings to a global movement, GNJ was born out of a passion for empowering individuals through comfort and confidence. Every piece tells a story, and you are part of it.</p>"
+          }
+        },
         "button": {
           "type": "button",
           "settings": {
@@ -30,6 +36,7 @@
       },
       "block_order": [
         "heading",
+        "rte_X4T788",
         "button"
       ],
       "settings": {
