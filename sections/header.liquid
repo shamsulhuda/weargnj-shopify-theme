@@ -5,13 +5,13 @@
     width: 100%;
     background: transparent;
 }
- .dropdown-toggle::after {
+.dropdown-toggle::after {
     border: none!important;
-    font: normal normal normal 14px/1 FontAwesome;
-    content: "›"!important; /* the desired FontAwesome icon */
+    content: "›"!important;
     transform: rotate(90deg);
-    vertical-align: 0; /* to center vertically */
-  }
+    vertical-align: middle;
+    font-size: 15px;
+}
 {% endstyle %}
 {% assign links = section.settings.menu.links %}
 <div class="header-area text-body transparent_header">
