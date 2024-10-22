@@ -31,7 +31,11 @@
   
       <!-- Navbar brand (logo) in the center -->
       <a class="navbar-brand" href="#">
+        {% if section.settings.logo != blank %}
         {{ section.settings.logo | image_url: width:150 | image_tag }}
+        {% else %}
+        {{ shop.name }}
+        {% endif %}
       </a>
   
       <!-- Navbar items and dropdown -->
