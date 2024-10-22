@@ -112,6 +112,14 @@
 {
     content: '←';
 }
+.slick-prev, .slick-next{
+  z-index: 99;
+}
+.slick-prev:before, .slick-next:before {
+    padding: 10px;
+    background: #000;
+    border-radius: 20px;
+}
 
 /* Dots */
 .slick-dotted.slick-slider
