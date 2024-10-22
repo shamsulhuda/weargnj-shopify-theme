@@ -8,9 +8,9 @@
     color: inherit;
     font-weight: 600;
 }
- .best__seller__item {
+ /* .best__seller__item {
 	 max-width: max-content;
-}
+} */
  .best__seller__item .best__seller__thumb {
 	 position: relative;
 	 overflow: hidden;
