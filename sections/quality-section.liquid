@@ -31,6 +31,40 @@
         "unit": "px",
         "default": 30
       }
+    ],
+    "blocks": [
+      {
+        "type": "quality",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "90-Day Quality Guarantee - Love it or it’s on us"
+          },
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Select Icon",
+            "options": [
+              {
+                "label": "Package check",
+                "value": "package-check"
+              },
+              {
+                "label": "Underpant",
+                "value": "underpants"
+              },
+              {
+                "label": "Eco-power",
+                "value": "eco-power"
+              }
+            ],
+            "default": "package-check"
+          }
+        ]
+      }
     ]
   }
 {% endschema %}
