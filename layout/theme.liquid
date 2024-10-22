@@ -268,8 +268,8 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'font-family.css' | asset_url | stylesheet_tag }}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
     
 
     {%- if settings.cart_type == 'drawer' -%}
