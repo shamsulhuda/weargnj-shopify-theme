@@ -27,7 +27,7 @@
  {% endstyle %}
 {% assign links = section.settings.menu.links %}
 <div class="header-area text-body">
-  <nav class="navbar navbar-expand-lg text-light bg-transparent">
+  <!-- <nav class="navbar navbar-expand-lg text-light bg-transparent">
     <div class="container-fluid px-5">
   
       <!-- Toggler for mobile view -->
@@ -91,7 +91,40 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand d-md-none" href="#">
+      <img src="https://codingyaar.com/wp-content/uploads/logo-1.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <a class="navbar-brand d-none d-md-block" href="#">
+          <img src="https://codingyaar.com/wp-content/uploads/logo-1.png" alt="">
+        </a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
 </div>
 {% schema %}
 {
