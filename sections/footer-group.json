@@ -57,7 +57,7 @@
       "settings": {
         "bg_color": "#ffffff",
         "padding_top": 50,
-        "padding_bottom": 0
+        "padding_bottom": 40
       }
     },
     "footer-bottom": {
