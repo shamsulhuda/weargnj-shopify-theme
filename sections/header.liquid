@@ -29,7 +29,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   {% for link in links %}
-                    <li class="nav-item"{% if link.links.size > 1 %} dropdown{% endif %}>
+                    <li class="nav-item{% if forloop.index == 2 %} bundle{% endif %}"{% if link.links.size > 1 %} dropdown{% endif %}>
                       <a class="nav-link{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
                         {{ link.title }}
                       </a>
