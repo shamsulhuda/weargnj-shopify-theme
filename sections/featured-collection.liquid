@@ -40,13 +40,16 @@
                           <h3><a href="product-details.html">{{ product.title | escape }}</a></h3>
                           
                           <div class="product__meta">
-                              <div class="size">
+                              <div class="fabric">
                                   <span class="icon">
-                                    {% render 'icons', icon: block.settings.icon, size: size %}            
+                                    {% render 'icons', icon: 'underpant', size: 18 %}            
                                   </span>
                                   <span>Seamless Comfort</span>
                               </div>
-                              <div class="fabric">
+                              <div class="size">
+                                  <span class="icon">
+                                    {% render 'icons', icon:'ruler', size: 18 %}            
+                                  </span>
                                   <span>Shaping Fit</span>
                               </div>
                           </div>
