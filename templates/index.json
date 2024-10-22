@@ -41,49 +41,10 @@
       "type": "featured-collection",
       "settings": {
       }
-    },
-    "quality_section_pfydTR": {
-      "type": "quality-section",
-      "blocks": {
-        "quality_bw7BCG": {
-          "type": "quality",
-          "settings": {
-            "text": "90-Day Quality Guarantee - Love it or it’s on us",
-            "icon": "package-check",
-            "icon_size": 24
-          }
-        },
-        "quality_NtB8yX": {
-          "type": "quality",
-          "settings": {
-            "text": "True to size fit guarantee",
-            "icon": "underpants",
-            "icon_size": 24
-          }
-        },
-        "quality_6rhnDW": {
-          "type": "quality",
-          "settings": {
-            "text": "Premium sustainable fabric",
-            "icon": "eco-power",
-            "icon_size": 24
-          }
-        }
-      },
-      "block_order": [
-        "quality_bw7BCG",
-        "quality_NtB8yX",
-        "quality_6rhnDW"
-      ],
-      "settings": {
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection",
-    "quality_section_pfydTR"
+    "featured_collection"
   ]
 }
