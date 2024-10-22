@@ -15,31 +15,6 @@
       <div class="row">
           <div class="best__seller__slider overflow-hidden">
               <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <div class="best__seller__item">
-                        {% for product in products %}
-                          <div class="best__seller__thumb">
-                              <a href="product-details.html">
-                                  <img src="{{ product.featured_image | img_url:'medium' }}" alt="{{ product.title }}">
-                              </a>
-                              <div class="special__tags">
-                                  <div class="best-seller">
-                                      <span class="icon">
-                                        {% render 'icons', icon: 'verified-check', size: 16 %}
-                                      </span>
-                                      <span>Best Seller</span>
-                                  </div>
-                                  <div class="bundle">
-                                      <span class="icon">
-                                        {% render 'icons', icon: 'gift', size: 16 %}
-                                      </span>
-                                      <span>Bundle</span>
-                                  </div>
-                              </div>
-                          </div>
-                          {% endfor %}
-                      </div>
-                  </div>
                   {% for product in products %}
                   <div class="swiper-slide">
                       <div class="best__seller__item">
