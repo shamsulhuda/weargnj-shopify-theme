@@ -5,3 +5,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: Switzer;
+  src: url('https://cdn.shopify.com/s/files/1/0659/9196/6896/files/Switzer-Regular.otf?v=1729573896');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
