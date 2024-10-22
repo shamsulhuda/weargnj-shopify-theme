@@ -12,7 +12,7 @@
 <div class="announcement-bar" id="announce_{{ section.id }}">
   <div class="announcement-bar-inner">
     {% for block in section.blocks %}
-      <a href="{{ block.settings.link | default:'#' }}" class=".rte">{{ block.settings.text }}</a>
+      <a href="{{ block.settings.link | default:'#' }}" class="rte">{{ block.settings.text }}</a>
     {% endfor %}
   </div>
 </div>
