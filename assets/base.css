@@ -3597,6 +3597,7 @@
   }
 
 h1.heading {
+  font-size: 56px;
   font-weight: 800;
   font-family: var(--font-heading-family);  
 }
