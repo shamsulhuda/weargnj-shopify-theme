@@ -12,60 +12,54 @@
       <div class="row">
           <h3 class="best__seller__heading text-center">Our Best Sellers</h3>
       </div>
-      <div class="row">
-          <div class="best__seller__slider overflow-hidden">
-              <div class="swiper-wrapper featuredSlider">
-                  {% for product in products %}
-                  <div class="swiper-slide">
-                      <div class="best__seller__item">
-                          <div class="best__seller__thumb">
-                              <a href="product-details.html">
-                                  <img src="{{ product.featured_image | img_url:'medium' }}" alt="{{ product.title }}">
-                              </a>
-                              <div class="special__tags">
-                                  <div class="best-seller">
-                                      <span class="icon">
-                                        {% render 'icons', icon: 'verified-check', size: 16 %}
-                                      </span>
-                                      <span>Best Seller</span>
-                                  </div>
-                                  <div class="bundle">
-                                      <span class="icon">
-                                        {% render 'icons', icon: 'verified-check', size: 16 %}
-                                      </span>
-                                      <span>Best Seller</span>
-                                  </div>
+      <div class="best__seller__slider overflow-hidden">
+          <div class="row swiper-wrapper featuredSlider">
+              {% for product in products %}
+              <div class="col-md-3 swiper-slide">
+                  <div class="best__seller__item">
+                      <div class="best__seller__thumb">
+                          <a href="product-details.html">
+                              <img src="{{ product.featured_image | img_url:'medium' }}" alt="{{ product.title }}">
+                          </a>
+                          <div class="special__tags">
+                              <div class="best-seller">
+                                  <span class="icon">
+                                    {% render 'icons', icon: 'verified-check', size: 16 %}
+                                  </span>
+                                  <span>Best Seller</span>
                               </div>
-                          </div>
-                          <div class="best__seller__content">
-                              <h6><a href="product-details.html">{{ product.title | escape }}</a></h6>
-                              
-                              <div class="product__meta">
-                                  <div class="size">                                      
-                                      <span>Seamless Comfort</span>
-                                  </div>
-                                  <div class="fabric">
-                                      <span>Shaping Fit</span>
-                                  </div>
-                              </div>
-                              <div class="product__price">
-                                  <div class="price">
-                                      <span class="current__price">{{ product.price | money }}</span>
-                                      <span class="old__price">$150.00</span>
-                                  </div>
-                                  <form action="#">
-                                      <button type="submit" class="cart__btn">Add To Cart</button>
-                                  </form>
+                              <div class="bundle">
+                                  <span class="icon">
+                                    {% render 'icons', icon: 'verified-check', size: 16 %}
+                                  </span>
+                                  <span>Best Seller</span>
                               </div>
                           </div>
                       </div>
+                      <div class="best__seller__content">
+                          <h6><a href="product-details.html">{{ product.title | escape }}</a></h6>
+                          
+                          <div class="product__meta">
+                              <div class="size">                                      
+                                  <span>Seamless Comfort</span>
+                              </div>
+                              <div class="fabric">
+                                  <span>Shaping Fit</span>
+                              </div>
+                          </div>
+                          <div class="product__price">
+                              <div class="price">
+                                  <span class="current__price">{{ product.price | money }}</span>
+                                  <span class="old__price">$150.00</span>
+                              </div>
+                              <form action="#">
+                                  <button type="submit" class="cart__btn">Add To Cart</button>
+                              </form>
+                          </div>
+                      </div>
                   </div>
-                  {% endfor %}
               </div>
-              <div class="slider__control">
-                  <div class="weargnj__next">1</div>
-                  <div class="weargnj__prev">2</div>
-              </div>
+              {% endfor %}
           </div>
       </div>
   </div>
