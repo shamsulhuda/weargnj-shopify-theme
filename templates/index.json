@@ -99,11 +99,42 @@
         "padding_top": 30,
         "padding_bottom": 30
       }
+    },
+    "categories_KcKajr": {
+      "type": "categories",
+      "blocks": {
+        "category_XrDcwG": {
+          "type": "category",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "category_Y6xACf": {
+          "type": "category",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "category_rUYjKi": {
+          "type": "category",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_XrDcwG",
+        "category_Y6xACf",
+        "category_rUYjKi"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
     "quality_section_NHaBwq",
-    "featured_collection"
+    "featured_collection",
+    "categories_KcKajr"
   ]
 }
