@@ -2,7 +2,7 @@
 <div class="weargnj__collection pt-5">
   <div class="container-fluid">
       <div class="row">
-          <h1 class="best__seller__heading text-center heading mb-5">Our Collections</h1>
+          <h1 class="best__seller__heading text-center heading mb-5">{{ section.settings.title | escape }}</h1>
       </div>
       <div class="row">
           {% for block in section.blocks %}
@@ -29,7 +29,14 @@
 {% schema %}
   {
     "name": "Category Section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Our Collections"
+      }
+    ],
     "blocks": [
       {
         "type": "category",
