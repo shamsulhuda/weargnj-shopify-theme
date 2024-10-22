@@ -3,9 +3,19 @@
     padding-top: {{ section.settings.padding_top | append: 'px'}};
     padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
   }
+  {
+    background-image: url('{{ section.settings.banner | img_url:'original' }}');
+    height: 500px;
+    background-repeat: no-repeat;
+    min-height: 400px;
+  }
 {% endstyle %}
 <div class="banner-section" id="banner_{{ section.id }}">
-  <h1>Banner</h1>
+  <div class="container-fluid">
+    <div class="main-banner">
+      <h1>Banner</h1>
+    </div>
+  </div>
 </div>
 
 {% schema %}

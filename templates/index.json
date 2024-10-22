@@ -33,6 +33,7 @@
         "button"
       ],
       "settings": {
+        "banner": "shopify://shop_images/image-default.png",
         "padding_top": 0,
         "padding_bottom": 0
       }
