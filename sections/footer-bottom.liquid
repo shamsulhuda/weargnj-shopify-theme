@@ -4,7 +4,7 @@
   padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
 }
 {% endstyle %}
-<div class="footer-bottom" id="section_{{ section.id }}">
+<div class="footer-bottom container-fluid" id="section_{{ section.id }}">
   <div class="container">
     <div class="d-flex justify-content-space-between align-items-center">
        {% for block in section.blocks %}
