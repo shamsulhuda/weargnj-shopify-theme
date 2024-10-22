@@ -8,34 +8,35 @@
  * ------------------------------------------------------------
  */
 {
-    "name": "Header Group",
-    "type": "header",
-    "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Welcome to our store",
-              "link": "#"
-            }
+  "name": "Header Group",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Special offer -> get an extra 15% off + free delivery",
+            "link": "#"
           }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
-        "settings": {
         }
       },
-      "header": {
-        "type": "header",
-        "settings": {
-        }
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
       }
     },
-    "order": [
-      "announcement-bar",
-      "header"
-    ]
-  }
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
