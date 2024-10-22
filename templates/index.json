@@ -45,14 +45,6 @@
         "padding_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "build-a-bundle",
-        "padding_top": 30,
-        "padding_bottom": 30
-      }
-    },
     "quality_section_NHaBwq": {
       "type": "quality-section",
       "blocks": {
@@ -79,16 +71,33 @@
             "icon": "eco-power",
             "icon_size": 24
           }
+        },
+        "quality_4Cp4bk": {
+          "type": "quality",
+          "settings": {
+            "text": "Made in UAE",
+            "icon": "sun",
+            "icon_size": 24
+          }
         }
       },
       "block_order": [
         "quality_AfVXGD",
         "quality_wnxRFX",
-        "quality_JG6GJU"
+        "quality_JG6GJU",
+        "quality_4Cp4bk"
       ],
       "settings": {
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "build-a-bundle",
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
