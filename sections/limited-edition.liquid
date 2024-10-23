@@ -9,8 +9,9 @@
                   {% endif %}
               </div>
               <div class="limited__time__product">
-
-                  <div class="best__seller__item">
+                 {% for block in section.blocks %}
+                  {% assign product = block.settings.product %}
+                  <div class="best__seller__item">                   
                       <div class="best__seller__thumb">
                           <div class="item__left">
                               <div class="quantity">
@@ -19,8 +20,8 @@
 
                               </div>
                           </div>
-                          <a href="product-details.html">
-                              <img src="assets/img/best-seller/1.png" alt="">
+                          <a href="{{ product.url }}">
+                              <img src="{{ product.featured_image | img_url:'large' }}" alt="{{ product.title }}">
                           </a>
 
                           <div class="special__tags">
@@ -30,8 +31,8 @@
                               </div>
                           </div>
                       </div>
-                      <div class="best__seller__content">
-                          <h6><a href="product-details.html">The Elegant Classic Brief</a></h6>
+                      <div class="{{ product.url }}">
+                          <h6><a href="product-details.html">{{ product.title }}</a></h6>
                           
                           <div class="product__meta">
                               <div class="size">
@@ -45,7 +46,7 @@
                           </div>
                           <div class="product__price">
                               <div class="price">
-                                  <span class="current__price">$120.00</span>
+                                  <span class="current__price">{{ product.price | money }}</span>
                               </div>
                               <form action="#">
                                   <button type="submit" class="cart__btn">Add To Cart</button>
@@ -53,49 +54,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="best__seller__item">
-                      <div class="best__seller__thumb">
-                          <div class="item__left">
-                              <div class="quantity">
-                                  <img src="assets/icons/warning.svg" alt="">
-                                  <span>Only 5 left in stock!</span>
-
-                              </div>
-                          </div>
-                          <a href="product-details.html">
-                              <img src="assets/img/best-seller/2.png" alt="">
-                          </a>
-
-                          <div class="special__tags">
-                              <div class="best-seller limited">
-                                  <img src="assets/icons/crown.svg" alt="">
-                                  <span>Limited Edition</span>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="best__seller__content">
-                          <h6><a href="product-details.html">The Sculptor High Waist Brief</a></h6>
-                          
-                          <div class="product__meta">
-                              <div class="size">
-                                  <img src="assets/icons/comfort.svg" alt="">
-                                  <span>Seamless Comfort</span>
-                              </div>
-                              <div class="fabric">
-                                  <img src="assets/icons/fit.svg" alt="">
-                                  <span>Shaping Fit</span>
-                              </div>
-                          </div>
-                          <div class="product__price">
-                              <div class="price">
-                                  <span class="current__price">$120.00</span>
-                              </div>
-                              <form action="#">
-                                  <button type="submit" class="cart__btn">Add To Cart</button>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
+                  {% endfor %}
 
               </div>
           </div>
@@ -117,6 +76,32 @@
         "id": "description",
         "label": "Description",
         "default": "<p>Crafted by experts for an elevated experience, only a limited number of pieces available.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Select Product"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Limited Edition",
+        "blocks": [
+          {
+            "type": "product"
+          },
+          {
+            "type": "product"
+          }
+        ]
       }
     ]
   }
