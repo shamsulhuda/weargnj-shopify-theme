@@ -1,22 +1,18 @@
+{{ 'banner-component.css' | asset_url | stylesheet_tag }}
 {% style %}
-  #banner_{{ section.id }} .weargnj__banner{
+  #banner_{{ section.id }}{
+    padding-top: {{ section.settings.padding_top | append: 'px'}};
+    padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
+  }
+   #banner_{{ section.id }} .main-banner{
     position: relative;
-    background-image: url('{{ section.settings.banner | image_url:'original' }}');
+    background-image: url('{{ section.settings.banner | img_url:'original' }}');
     height: 600px;
     background-repeat: no-repeat;
     min-height: 400px;
     background-position: center;
     background-size: cover;
   }
-{% endstyle %}
-
-{% comment %}
-{% style %}
-  #banner_{{ section.id }}{
-    padding-top: {{ section.settings.padding_top | append: 'px'}};
-    padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
-  }
-
   
   #banner_{{ section.id }} .banner__content {
       position: relative;
@@ -27,109 +23,35 @@
     color: #FFFFFF;
   }
 {% endstyle %}
-{% endcomment %}
-<div id="banner_{{ section.id }}">
-  <div class="weargnj__banner banner__height">
-    <div class="container-fluid">
-        <div class="weargnj__menu__wrapper">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="menu__block">
-                        <div class="weargnj__main__menu">
-                            <nav>
-                                <ul class="list-unstyled d-flex">
-                                    <li class="nav-item dropdown">
-                                        <a href="#">Shop All</a>
-                                        <ul class="dropdown-menu d-none">
-                                            <li><a href="#">Shop All</a></li>
-                                            <li><a href="#">Shop All</a></li>
-                                            <li><a href="#">Shop All</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="special__text">Bundle & Save <span>4 for 15% off</span></li>
-                                    <li><a href="#">Limited Edition</a></li>
-                                    <li><a href="#">About</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+<div class="banner-section" id="banner_{{ section.id }}">
+  <div class="container-fluid">
+    <div class="main-banner">
+      <div class="main-banner-inner">
+        <div class="row align-items-center">
+          <div class="banner__content col-md-8">
+            {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'heading' %}
+              <div class="heading">
+                <h1>{{ block.settings.title }}</h1>
+              </div>
+              {% when 'rte' %}
+              <div class="rte my-3">
+                {{ block.settings.rte }}
+              </div>
+              {% when 'button' %}
+              <div class="buttons">
+                <div class="d-flex">
+                  {% if block.settings.btn1_url %}
+                  <a href="{{ block.settings.btn1_url }}" class="common__btn fill__btn">{{ block.settings.btn1_label }}</a>
+                  {% endif %}
+                  {% if block.settings.btn2_url %}
+                  <a href="{{ block.settings.btn2_url }}" class="common__btn text-light mx-4">{{ block.settings.btn2_label }}</a>
+                  {% endif %}
                 </div>
-                <div class="col-lg-1">
-                    <div class="logo__block">
-                        <a href="index.html">
-                            <img src="assets/img/logo/logo.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="search__block">
-                        <form action="#" method="post" class="search__form">
-                            <div class="input-box">
-                                <input type="text" placeholder="Search here...">
-                                <img class="search" src="assets/icons/search.svg" alt="">
-                            </div>
-                        </form>
-                        <div class="user__profile">
-                            <button><img src="assets/icons/user.svg" alt="user"></button>
-                        </div>
-                        <div class="cart__bag">
-                            <button>
-                                <span class="cart__count">2</span>
-                                <img src="assets/icons/shopping-bag.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="banner__content">
-                <h1 class="banner__heading__txt">
-                    Purposefully Crafted 
-                    <span>Designed for You</span>
-                </h1>
-                <p class="banner__description">From humble beginnings to a global movement, GNJ was born out of a passion for empowering individuals through comfort and confidence. Every piece tells a story, and you are part of it.
-                </p>
-                <div class="button__group">
-                    <a href="#" class="common__btn fill__btn">Shop The Collection</a>
-                    <a href="#" class="common__btn">Build A Bundle</a>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="banner-section" id="banner_{{ section.id }}">
-    <div class="container-fluid">
-      <div class="main-banner">
-        <div class="main-banner-inner">
-          <div class="row align-items-center">
-            <div class="banner__content col-md-8">
-              {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'heading' %}
-                <div class="heading">
-                  <h1>{{ block.settings.title }}</h1>
-                </div>
-                {% when 'rte' %}
-                <div class="rte my-3">
-                  {{ block.settings.rte }}
-                </div>
-                {% when 'button' %}
-                <div class="buttons">
-                  <div class="d-flex">
-                    {% if block.settings.btn1_url %}
-                    <a href="{{ block.settings.btn1_url }}" class="common__btn fill__btn">{{ block.settings.btn1_label }}</a>
-                    {% endif %}
-                    {% if block.settings.btn2_url %}
-                    <a href="{{ block.settings.btn2_url }}" class="common__btn text-light mx-4">{{ block.settings.btn2_label }}</a>
-                    {% endif %}
-                  </div>
-                </div>
-              {% endcase %}
-              {% endfor %}
-            </div>
+              </div>
+            {% endcase %}
+            {% endfor %}
           </div>
         </div>
       </div>
