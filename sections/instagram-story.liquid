@@ -17,7 +17,9 @@
                        <div class="instagram__item__thumb">
                            <img class="insta__shape" src="https://cdn.shopify.com/s/files/1/0659/9196/6896/files/pngwing_2.png?v=1729691073" alt="Insta-shape">
                            <a href="#" class="insta__thumb">
+                             {% if block.settings.image != blank %}
                                <img src="{{ block.settings.image | img_url:'medium' }}" alt="{{ block.settings.user_name }}">
+                             {% endif %}
                            </a>
                        </div>
                        <div class="insta__user__name">
@@ -107,7 +109,24 @@
     ],
     "presets": [
       {
-        "name": "Instagram Story"
+        "name": "Instagram Story",
+        "blocks": [
+          {
+            "type": "story"
+          },
+          {
+            "type": "story"
+          },
+          {
+            "type": "story"
+          },
+          {
+            "type": "story"
+          },
+          {
+            "type": "story"
+          }
+        ]
       }
     ]
   }
