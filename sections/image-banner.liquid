@@ -1,4 +1,4 @@
-
+{{ 'banner-component.css' | asset_url | stylesheet_tag }}
 <div id="#banner_{{ section.id }}">
   <div class="weargnj__banner banner__height" style="background-image: url('{{ section.settings.banner | img_url:'original' }}');">  
     <div class="container-fluid">
