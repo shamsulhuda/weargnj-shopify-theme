@@ -79,7 +79,7 @@
           "type": "footer-menu",
           "settings": {
             "column": 2,
-            "heading": "Heading",
+            "heading": "Navigate",
             "menu": "footer"
           }
         },
@@ -87,7 +87,7 @@
           "type": "footer-menu",
           "settings": {
             "column": 2,
-            "heading": "Heading",
+            "heading": "Company",
             "menu": "footer"
           }
         },
@@ -95,7 +95,7 @@
           "type": "information",
           "settings": {
             "column": 3,
-            "heading": "Heading",
+            "heading": "Contact us",
             "information": "<ul>\n                            <li><a href=\"#\">support@weargnj.io</a></li>                      <li><a href=\"#\">+37129275555</a></li>\n</ul>"
           }
         },
