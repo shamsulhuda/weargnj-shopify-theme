@@ -11,6 +11,39 @@
   "name": "Footer Group",
   "type": "footer",
   "sections": {
+    "pre-footer": {
+      "type": "pre-footer",
+      "blocks": {
+        "card": {
+          "type": "card",
+          "settings": {
+          }
+        },
+        "card_1": {
+          "type": "card",
+          "settings": {
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "card",
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -106,6 +139,7 @@
     }
   },
   "order": [
+    "pre-footer",
     "footer"
   ]
 }
