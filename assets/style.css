@@ -110,16 +110,16 @@ h4 {
 }
 @media screen and (max-width: 768px) {
   h4 {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
 h5 {
   font-size: 40px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   h5 {
-    font-size: 18px;
+    font-size: 30px;
   }
 }
 
@@ -134,11 +134,6 @@ h6 {
 @media screen and (max-width: 992px) {
   h6 {
     font-size: 24px;
-  }
-}
-@media screen and (max-width: 768px) {
-  h6 {
-    font-size: 16px;
   }
 }
 
@@ -884,11 +879,16 @@ img {
     font-size: 50px;
   }
 }
+@media screen and (max-width: 768px) {
+  .weargnj__banner .banner__content .banner__heading__txt {
+    font-size: 40px;
+  }
+}
 .weargnj__banner .banner__content .banner__heading__txt span {
   display: block;
   font-weight: 400;
 }
-.weargnj__banner .banner__content .banner__description p{
+.weargnj__banner .banner__content .banner__description {
   max-width: 600px;
   color: var(--common-white);
   line-height: 32px;
@@ -898,6 +898,7 @@ img {
   display: flex;
   gap: 15px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .weargnj__feature {
@@ -926,6 +927,7 @@ img {
   color: var(--primary-300);
 }
 
+/* best seller section */
 .weargnj__best__seller .best__seller__heading {
   font-weight: 600px;
   color: var(--primary-300);
@@ -933,7 +935,7 @@ img {
 }
 
 .best__seller__item {
-  /* max-width: max-content; */
+  max-width: max-content;
 }
 .best__seller__item .best__seller__thumb {
   position: relative;
@@ -982,6 +984,7 @@ img {
 .best__seller__item .best__seller__content .product__meta {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .best__seller__item .best__seller__content .product__meta .size,
 .best__seller__item .best__seller__content .product__meta .fabric {
@@ -1057,6 +1060,7 @@ img {
   transition: var(--transition);
 }
 
+/* single collection section */
 .single__collection {
   background-position: center;
   background-size: cover;
@@ -1102,6 +1106,7 @@ img {
   transition: var(--transition);
 }
 
+/* bundle Product section */
 .weargnj__bundle__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1173,6 +1178,7 @@ img {
   height: 100%;
   object-fit: cover;
   margin: 0;
+  width: 100%;
 }
 
 .bundle__right__thumb .common__btn {
@@ -1181,6 +1187,7 @@ img {
   left: 30px;
 }
 
+/* marquee section */
 .single__marque__item {
   display: flex;
   max-width: max-content;
@@ -1199,14 +1206,21 @@ img {
   font-size: 25px;
 }
 
+/* faq section area css */
 .faq__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
+.faq__left {
+  height: 100%;
+}
 .faq__left img {
   border-radius: 15px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .faq__right {
@@ -1271,15 +1285,27 @@ img {
   }
 }
 
+/* Limited product section */
 .weargnj__limited {
   background: #EBDEC1;
   padding: 40px;
   border-radius: 15px;
 }
+@media screen and (max-width: 768px) {
+  .weargnj__limited {
+    padding: 30px 20px;
+  }
+}
 
 .weargnj__limited__product {
   display: flex;
   gap: 15px;
+}
+@media screen and (max-width: 992px) {
+  .weargnj__limited__product {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .weargnj__limited__product .section__title {
   max-width: 360px;
@@ -1311,7 +1337,19 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
+@media screen and (max-width: 768px) {
+  .limited__time__product {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .limited__time__product .best__seller__item .best__seller__content h6 a {
+    font-size: 20px;
+  }
+}
 
+/* testimonial section */
 .testimonial__content {
   max-width: 330px;
 }
@@ -1354,6 +1392,7 @@ img {
   margin-top: 15px;
 }
 
+/* today best seller section */
 .item__of__the__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1369,10 +1408,45 @@ img {
   bottom: 20px;
   left: 30px;
 }
+@media screen and (max-width: 768px) {
+  .left__side .title {
+    top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left__side .title {
+    font-size: 30px;
+    max-width: 310px;
+  }
+}
+.left__side__background {
+  height: 100%;
+  width: 100%;
+}
+.left__side__background img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .right__side .content-block {
   padding: 46px 120px;
   background-color: #E7E4E5;
+}
+@media screen and (max-width: 1200px) {
+  .right__side .content-block {
+    padding: 45px 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right__side .content-block {
+    padding: 45px 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .right__side .content-block {
+    padding: 30px 20px;
+  }
 }
 
 .item__of__day__slider {
@@ -1389,6 +1463,7 @@ img {
   padding: 0 8px 8px 8px;
 }
 
+/* about us section */
 .weargnj__about {
   background-color: #F1D5CE;
   padding: 40px;
@@ -1398,6 +1473,11 @@ img {
 .about__content a {
   display: inline-block;
   margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  .about__content a {
+    margin-bottom: 50px;
+  }
 }
 .about__content a img {
   margin: 0;
@@ -1412,6 +1492,7 @@ img {
   color: var(--primary-300);
 }
 
+/* instagram section */
 .weargnj__instagram {
   background: #E7E4E5;
   border-radius: 16px;
@@ -1429,6 +1510,11 @@ img {
   font-size: 40px;
   font-family: var(--recoleta);
   font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .weargnj__instagram .section-title a {
+    font-size: 30px;
+  }
 }
 
 .instagram__item {
@@ -1475,6 +1561,7 @@ img {
   object-fit: cover;
 }
 
+/* feature section */
 .single__feature__card {
   background-color: #fff;
   padding: 24px;
@@ -1500,6 +1587,7 @@ img {
   margin-bottom: 0;
 }
 
+/* footer area section */
 .weargnj__foooter {
   background-color: var(--common-white);
   padding: 48px 40px;
@@ -1531,6 +1619,16 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+@media screen and (max-width: 768px) {
+  .footer__widget .three__column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__widget .three__column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .weargnj__newsletter {
   max-width: 400px;
@@ -1539,7 +1637,7 @@ img {
   position: relative;
 }
 .weargnj__newsletter .newsletter__form input {
-  padding: 16px 24px;
+  padding: 20px 24px;
   border: 1px solid var(--primary-300);
   border-radius: 50px;
   font-size: 18px;
@@ -1582,6 +1680,7 @@ img {
   transition: var(--transition);
 }
 
+/* footer copyright css */
 .footer__copyright__wrapper {
   border-top: 1px dashed #C2B6B7;
   border-image: repeating-linear-gradient(to right, #C2B6B7 0, #C2B6B7 5px, transparent 5px, transparent 10px) 30;
@@ -1589,6 +1688,13 @@ img {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .footer__copyright__wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 }
 .footer__copyright__wrapper .payment__method {
   display: flex;
@@ -3079,6 +3185,11 @@ Button
   line-height: 1.1;
   border-radius: 25px;
 }
+@media screen and (max-width: 768px) {
+  .common__btn {
+    padding: 12px 40px;
+  }
+}
 .common__btn.fill__btn {
   background-color: #fff;
   color: var(--primary-300);
@@ -3099,6 +3210,11 @@ h3 span.percent {
 
 .mt-80 {
   margin-top: 80px;
+}
+@media screen and (max-width: 992px) {
+  .mt-80 {
+    margin-top: 60px;
+  }
 }
 
 .mt-45 {
@@ -3121,6 +3237,12 @@ h3 span.percent {
   margin-top: 80px;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 992px) {
+  .my-80 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
 
 .mt-60 {
   margin-top: 60px;
@@ -3141,6 +3263,11 @@ h3 span.percent {
 
 .pt-50 {
   padding-top: 50px;
+}
+
+.th__back__to__top svg {
+  height: 4em;
+  width: 4em;
 }
 
 /*================ Thanks for choosing our Template ==============*/
