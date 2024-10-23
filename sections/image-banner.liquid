@@ -9,54 +9,29 @@
     <div class="container-fluid">
         <div class="row">
             <div class="banner__content">
-                <h1 class="banner__heading__txt">
-                    Purposefully Crafted 
-                    <span>Designed for You</span>
-                </h1>
-                <p class="banner__description">From humble beginnings to a global movement, GNJ was born out of a passion for empowering individuals through comfort and confidence. Every piece tells a story, and you are part of it.
-                </p>
-                <div class="button__group">
-                    <a href="#" class="common__btn fill__btn">Shop The Collection</a>
-                    <a href="#" class="common__btn">Build A Bundle</a>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-</div>
-  
-<div class="banner-section" id="banner_{{ section.id }}">
-  <div class="container-fluid">
-    <div class="main-banner">
-      <div class="main-banner-inner">
-        <div class="row align-items-center">
-          <div class="banner__content col-md-8">
-            {% for block in section.blocks %}
-            {% case block.type %}
+              {% for block in section.blocks %}
+              {% case block.type %}
               {% when 'heading' %}
-              <div class="heading">
-                <h1>{{ block.settings.title }}</h1>
-              </div>
+                <h1 class="banner__heading__txt">
+                    {{ block.settings.title }}
+                </h1>
               {% when 'rte' %}
-              <div class="rte my-3">
-                {{ block.settings.rte }}
-              </div>
-              {% when 'button' %}
-              <div class="buttons">
-                <div class="d-flex">
+                <p class="banner__description">
+                  {{ block.settings.rte }}
+                </p>
+                {% when 'button' %}
+                <div class="button__group">
                   {% if block.settings.btn1_url %}
                   <a href="{{ block.settings.btn1_url }}" class="common__btn fill__btn">{{ block.settings.btn1_label }}</a>
                   {% endif %}
                   {% if block.settings.btn2_url %}
-                  <a href="{{ block.settings.btn2_url }}" class="common__btn text-light mx-4">{{ block.settings.btn2_label }}</a>
+                  <a href="{{ block.settings.btn2_url }}" class="common__btn">{{ block.settings.btn2_label }}</a>
                   {% endif %}
                 </div>
-              </div>
-            {% endcase %}
-            {% endfor %}
-          </div>
+              {% endcase %}
+              {% endfor %}
+            </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
