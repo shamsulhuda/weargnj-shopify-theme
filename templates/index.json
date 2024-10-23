@@ -429,6 +429,15 @@
         "main_image": "shopify://shop_images/product-placeholder.jpg",
         "collection": "build-a-bundle"
       }
+    },
+    "simple_about_us_Tk9dYP": {
+      "type": "simple-about-us",
+      "settings": {
+        "image": "shopify://shop_images/Arabic_Logo_4x_1_1.png",
+        "description": "Founded by an Emerati woman, our designs combine Middle Eastern elegance with effortless silhouettes. Months of development goes into each of our highly considered pieces and we only create the kind of intimates women really want to find in their top drawer.",
+        "btn_label": "More about Us",
+        "btn_url": "#"
+      }
     }
   },
   "order": [
@@ -442,6 +451,7 @@
     "limited_edition_JDJKpH",
     "customer_video_review_9Aimwi",
     "faq_section_g7GRMf",
-    "best_selling_HwfPVW"
+    "best_selling_HwfPVW",
+    "simple_about_us_Tk9dYP"
   ]
 }
