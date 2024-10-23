@@ -11,9 +11,9 @@
                     {{ block.settings.title }}
                 </h1>
               {% when 'rte' %}
-                <p class="banner__description">
+                <div class="banner__description">
                   {{ block.settings.rte }}
-                </p>
+                </div>
                 {% when 'button' %}
                 <div class="button__group">
                   {% if block.settings.btn1_url %}
