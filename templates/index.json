@@ -267,6 +267,31 @@
         "rte": "<p>We see our intimates as the starting point for all your greatest outfits, so they need to look and feel superior.</p>",
         "image": "shopify://shop_images/product-placeholder.jpg"
       }
+    },
+    "limited_edition_JDJKpH": {
+      "type": "limited-edition",
+      "blocks": {
+        "product_9yCFyy": {
+          "type": "product",
+          "settings": {
+            "product": "example-hat"
+          }
+        },
+        "product_TK9hGX": {
+          "type": "product",
+          "settings": {
+            "product": "example-pants"
+          }
+        }
+      },
+      "block_order": [
+        "product_9yCFyy",
+        "product_TK9hGX"
+      ],
+      "settings": {
+        "heading": "Limited Edition",
+        "description": "<p>Crafted by experts for an elevated experience, only a limited number of pieces available.</p>"
+      }
     }
   },
   "order": [
@@ -276,6 +301,7 @@
     "categories_KcKajr",
     "bundle_offer_tXtXE9",
     "marquee_text_section_Vzy78c",
-    "faq_section_btPwF7"
+    "faq_section_btPwF7",
+    "limited_edition_JDJKpH"
   ]
 }
