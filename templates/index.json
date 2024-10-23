@@ -292,6 +292,79 @@
         "heading": "Limited Edition",
         "description": "<p>Crafted by experts for an elevated experience, only a limited number of pieces available.</p>"
       }
+    },
+    "customer_video_review_9Aimwi": {
+      "type": "customer-video-review",
+      "blocks": {
+        "testimonial_UMrGnR": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/1_0c751e7d-7749-4281-a84b-c6c5fe6e55d8.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "1"
+          }
+        },
+        "testimonial_HcVd9c": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/2_94e88d66-94ca-4ebd-a180-f21df204ff39.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "5"
+          }
+        },
+        "testimonial_7K8Dwf": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/3_acbcdaf6-6704-41da-8a75-fb8ddf2d78cf.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "5"
+          }
+        },
+        "testimonial_gLQ6Xp": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/4_dde84254-64ee-4c37-b751-f5650d6f6c9c.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "5"
+          }
+        },
+        "testimonial_LqX3iG": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/5_af2dff7c-0ff6-48e3-80e0-dbf1623c6d14.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "5"
+          }
+        },
+        "testimonial_ctnpNf": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/3_acbcdaf6-6704-41da-8a75-fb8ddf2d78cf.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "5"
+          }
+        },
+        "testimonial_ThcXt4": {
+          "type": "testimonial",
+          "settings": {
+            "poster": "shopify://shop_images/2_94e88d66-94ca-4ebd-a180-f21df204ff39.png",
+            "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "rating": "5"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_UMrGnR",
+        "testimonial_HcVd9c",
+        "testimonial_7K8Dwf",
+        "testimonial_gLQ6Xp",
+        "testimonial_LqX3iG",
+        "testimonial_ctnpNf",
+        "testimonial_ThcXt4"
+      ],
+      "settings": {
+        "heading": "98 <span class=\"percent\">%</span> customers would buy again"
+      }
     }
   },
   "order": [
@@ -302,6 +375,7 @@
     "bundle_offer_tXtXE9",
     "marquee_text_section_Vzy78c",
     "faq_section_btPwF7",
-    "limited_edition_JDJKpH"
+    "limited_edition_JDJKpH",
+    "customer_video_review_9Aimwi"
   ]
 }
