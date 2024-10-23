@@ -265,7 +265,8 @@
       "settings": {
         "heading": "Underwear should feel as good as it looks",
         "rte": "<p>We see our intimates as the starting point for all your greatest outfits, so they need to look and feel superior.</p>",
-        "image": "shopify://shop_images/product-placeholder.jpg"
+        "image": "shopify://shop_images/product-placeholder.jpg",
+        "position": true
       }
     },
     "limited_edition_JDJKpH": {
@@ -301,6 +302,7 @@
           "settings": {
             "poster": "shopify://shop_images/1_0c751e7d-7749-4281-a84b-c6c5fe6e55d8.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "1"
           }
         },
@@ -309,6 +311,7 @@
           "settings": {
             "poster": "shopify://shop_images/2_94e88d66-94ca-4ebd-a180-f21df204ff39.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "5"
           }
         },
@@ -317,6 +320,7 @@
           "settings": {
             "poster": "shopify://shop_images/3_acbcdaf6-6704-41da-8a75-fb8ddf2d78cf.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "5"
           }
         },
@@ -325,6 +329,7 @@
           "settings": {
             "poster": "shopify://shop_images/4_dde84254-64ee-4c37-b751-f5650d6f6c9c.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "5"
           }
         },
@@ -333,6 +338,7 @@
           "settings": {
             "poster": "shopify://shop_images/5_af2dff7c-0ff6-48e3-80e0-dbf1623c6d14.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "5"
           }
         },
@@ -341,6 +347,7 @@
           "settings": {
             "poster": "shopify://shop_images/3_acbcdaf6-6704-41da-8a75-fb8ddf2d78cf.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "5"
           }
         },
@@ -349,6 +356,7 @@
           "settings": {
             "poster": "shopify://shop_images/2_94e88d66-94ca-4ebd-a180-f21df204ff39.png",
             "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0",
+            "comment": "Allow an average of 3/5 working days to receive your package in mainland.",
             "rating": "5"
           }
         }
@@ -363,7 +371,9 @@
         "testimonial_ThcXt4"
       ],
       "settings": {
-        "heading": "98 <span class=\"percent\">%</span> customers would buy again"
+        "heading": "98 <span class=\"percent\">%</span> customers would buy again",
+        "btn_label": "Read More Reviews",
+        "btn_url": ""
       }
     },
     "faq_section_g7GRMf": {
@@ -407,7 +417,8 @@
       "settings": {
         "heading": "Why customers love us",
         "rte": "<p>Trusted quality, exceptional service, fast delivery, and products that exceed expectations every time!</p>",
-        "image": "shopify://shop_images/product-placeholder_99d0ef63-950e-4962-a6d2-660f0990cf2d.jpg"
+        "image": "shopify://shop_images/product-placeholder_99d0ef63-950e-4962-a6d2-660f0990cf2d.jpg",
+        "position": false
       }
     }
   },
