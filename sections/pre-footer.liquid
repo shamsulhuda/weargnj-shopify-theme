@@ -4,20 +4,22 @@
   padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
 }
 {% endstyle %}
-<div class="footer-bottom container-fluid" id="section_{{ section.id }}">
-  <div class="container">
-    <div class="d-flex justify-content-space-between align-items-center">
-       {% for block in section.blocks %}
-         {% case block.type %}
-           {% when 'copyright' %}
-          <div class="content">{{ block.settings.copyright_text }}</div>
-           {% when 'payment' %}
-          {% if block.settings.payment_method != blank %}
-            {{ block.settings.payment_method | image_url: width: 300 | image_tag }}
-          {% endif %}
-        {% endcase %}
-      {% endfor %}
-    </div>
+<div class="weargnj__feature__area mt-80">
+  <div class="container-fluid">
+      <div class="row">
+        {% for block in section.blocks %}
+          <div class="col-lg-3">
+              <div class="single__feature__card">
+                  <div class="icon">
+                      {% render 'icons', icon: block.settings.icon, size: block.settings.size  %}
+                  </div>
+                  <span class="feature__title">{{ block.settings.heading }}</span>
+                  {{ block.settings.description }}
+              </div>
+          </div>
+          {% endfor %}
+          
+      </div>
   </div>
 </div>
 
@@ -57,25 +59,50 @@
     ],
     "blocks": [
       {
-        "type": "copyright",
-        "name": "Copyright",
-        "settings":[
-          {
-            "type": "liquid",
-            "id": "copyright_text",
-            "label": "Copyright text",
-            "default": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
-          }
-        ]
-      },
-      {
-        "type": "payment",
-        "name": "Payment",
+        "type": "card",
+        "name": "Card",
         "settings": [
           {
-            "type": "image_picker",
-            "id": "payment_method",
-            "label": "Payment Image"
+            "type": "select",
+            "id": "icon",
+            "label": "Icon",
+            "options": [
+              {
+                "label": "Shipping",
+                "value": "shipping"
+              },
+              {
+                "label": "Secure",
+                "value": "secure"
+              },
+              {
+                "label": "Underpant",
+                "value": "underpant"
+              },
+              {
+                "label": "Eco-power",
+                "value": "eco-power"
+              }
+            ],
+            "default": "shipping"
+          },
+          {
+            "type": "number",
+            "id": "size",
+            "label": "Icon Size",
+            "default": 56
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Shipping & Returns"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Get your item in 2-5 business days, and return them within 90 days of purchase.</p>"
           }
         ]
       }
