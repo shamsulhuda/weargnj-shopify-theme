@@ -1,31 +1,14 @@
 <div class="weargnj__marque my-80">
   <div class="marque__wrapper overflow-hidden">
       <div class="swiper-wrapper">
+        {% for block in section.blocks %}
           <div class="swiper-slide">
               <div class="single__marque__item">
-                  <img src="assets/icons/sale-tag.png" alt="">
-                  <span><b>Free shipping</b> now and forever</span>
+                  {% render 'icons', icon: block.settings.icon, size: block.settings.icon_size %}
+                  <span>{{ block.settings.text }}</span>
               </div>
           </div>
-          <div class="swiper-slide">
-              <div class="single__marque__item">
-                  <img src="assets/icons/award.png" alt="">
-                  <span>Feel Comfortable <b>Guarantee</b></span>
-              </div>
-          </div>
-          <div class="swiper-slide">
-              <div class="single__marque__item">
-                  <img src="assets/icons/money-back.png" alt="">
-                  <span><b>Love it</b> or moneyback</span>
-              </div>
-          </div>
-
-          <div class="swiper-slide">
-              <div class="single__marque__item">
-                  <img src="assets/icons/sale-tag.png" alt="">
-                  <span><b>Free shipping</b> now and forever</span>
-              </div>
-          </div>
+        {% endfor %}          
       </div>
   </div>
 </div>
@@ -64,6 +47,12 @@
               }
             ],
             "default": "award"
+          },
+          {
+            "type": "number",
+            "id": "icon_size",
+            "label": "Icon Size",
+            "default": 48
           }
         ]
       }
