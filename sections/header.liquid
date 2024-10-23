@@ -1,22 +1,3 @@
-{{ 'header-component.css' | asset_url | stylesheet_tag }}
-{% style %}
-  .transparent_header .nav-link {
-    color: #ffffff;
-    font-weight: 300;
-}
- .transparent_header {
-    position: absolute;
-    width: 100%;
-    background: transparent;
-}
-.dropdown-toggle::after {
-    border: none!important;
-    content: "›"!important;
-    transform: rotate(90deg);
-    vertical-align: middle;
-    font-size: 15px;
-}
-{% endstyle %}
 {% assign links = section.settings.menu.links %}
 {% assign button_index = section.settings.button_index %}
 {% assign custom_txt = section.settings.custom_txt %}
