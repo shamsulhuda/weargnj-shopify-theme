@@ -4,7 +4,7 @@
 {% endcomment %}
 
 {% case icon %}
-{% when 'underpants' %}
+{% when 'underpant' %}
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="{{ size | default:24 }}" height="{{ size | default:24 }}" color="#000000" fill="none">
     <path d="M14 18.5C14 15.8333 15.9 10 21.5 10M10 18.5C10 15.8333 8.1 10 2.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     <path d="M10.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -49,6 +49,12 @@
   </clipPath>
   </defs>
   </svg>
+{% when 'search' %}
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.80541 17.2964C13.9423 17.2964 17.2959 13.9428 17.2959 9.80589C17.2959 5.66902 13.9423 2.31543 9.80541 2.31543C5.66854 2.31543 2.31494 5.66902 2.31494 9.80589C2.31494 13.9428 5.66854 17.2964 9.80541 17.2964Z" stroke="#23232A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15.0151 15.4043L17.9518 18.3334" stroke="#23232A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
 
 
 {% endcase %}
