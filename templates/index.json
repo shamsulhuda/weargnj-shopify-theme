@@ -365,6 +365,50 @@
       "settings": {
         "heading": "98 <span class=\"percent\">%</span> customers would buy again"
       }
+    },
+    "faq_section_g7GRMf": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_nrChBn": {
+          "type": "faq",
+          "settings": {
+            "icon": "modal",
+            "text": "Comfortable fit for all-day wear"
+          }
+        },
+        "faq_MRpkDn": {
+          "type": "faq",
+          "settings": {
+            "icon": "climate",
+            "text": "Seamless design for ultimate comfort"
+          }
+        },
+        "faq_Y4XfmQ": {
+          "type": "faq",
+          "settings": {
+            "icon": "style",
+            "text": "Sustainable fabrics with eco-conscious impact"
+          }
+        },
+        "faq_ecPhWa": {
+          "type": "faq",
+          "settings": {
+            "icon": "quality",
+            "text": "Fast shipping for quick delivery"
+          }
+        }
+      },
+      "block_order": [
+        "faq_nrChBn",
+        "faq_MRpkDn",
+        "faq_Y4XfmQ",
+        "faq_ecPhWa"
+      ],
+      "settings": {
+        "heading": "Why customers love us",
+        "rte": "<p>Trusted quality, exceptional service, fast delivery, and products that exceed expectations every time!</p>",
+        "image": "shopify://shop_images/product-placeholder_99d0ef63-950e-4962-a6d2-660f0990cf2d.jpg"
+      }
     }
   },
   "order": [
@@ -376,6 +420,7 @@
     "marquee_text_section_Vzy78c",
     "faq_section_btPwF7",
     "limited_edition_JDJKpH",
-    "customer_video_review_9Aimwi"
+    "customer_video_review_9Aimwi",
+    "faq_section_g7GRMf"
   ]
 }
