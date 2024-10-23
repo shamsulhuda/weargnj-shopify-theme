@@ -445,6 +445,8 @@
         "story_cVX3AU": {
           "type": "story",
           "settings": {
+            "image": "shopify://shop_images/1.jpg",
+            "user_img": "shopify://shop_images/author.png",
             "user_name": "@doctor-staci",
             "user_url": ""
           }
@@ -452,6 +454,8 @@
         "story_e7gXMH": {
           "type": "story",
           "settings": {
+            "image": "shopify://shop_images/4.jpg",
+            "user_img": "shopify://shop_images/author.png",
             "user_name": "@doctor-staci",
             "user_url": ""
           }
@@ -459,6 +463,8 @@
         "story_AhmnKE": {
           "type": "story",
           "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "user_img": "shopify://shop_images/author.png",
             "user_name": "@doctor-staci",
             "user_url": ""
           }
@@ -466,6 +472,8 @@
         "story_eBaxMc": {
           "type": "story",
           "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "user_img": "shopify://shop_images/author.png",
             "user_name": "@doctor-staci",
             "user_url": ""
           }
@@ -473,6 +481,8 @@
         "story_36pyxB": {
           "type": "story",
           "settings": {
+            "image": "shopify://shop_images/5.jpg",
+            "user_img": "shopify://shop_images/author.png",
             "user_name": "@doctor-staci",
             "user_url": ""
           }
