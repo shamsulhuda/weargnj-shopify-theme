@@ -16,7 +16,7 @@
                                   {{ link.title }} {% if forloop.index == button_index and button_index != blank %}<span>{{ custom_txt }}</span>{% endif %}
                                 </a>
                                 {% if link.links.size > 1 %}
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
+                                <ul class="dropdown-menu d-none" aria-labelledby="navbarDropdown_{{ forloop.index }}">
                                   {% for child in link.links %}
                                   <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
                                   {% endfor %}
