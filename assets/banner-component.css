@@ -9,3 +9,9 @@
   z-index: 1;
   border-radius: 8px;
 }
+
+.weargnj__banner .banner__content {
+    position: relative;
+    /* z-index: 1; */
+    padding: 140px 45px 55px;
+}
