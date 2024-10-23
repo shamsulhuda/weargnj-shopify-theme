@@ -243,15 +243,15 @@
         "faq_hCM6eg": {
           "type": "faq",
           "settings": {
-            "icon": "modal",
-            "text": "Made from sustainably produced LENZING™ Modal"
+            "icon": "style",
+            "text": "Shaped into soft-as-silk styles"
           }
         },
         "faq_E9yLba": {
           "type": "faq",
           "settings": {
-            "icon": "modal",
-            "text": "Made from sustainably produced LENZING™ Modal"
+            "icon": "quality",
+            "text": "Hypoallergenic moisture-wicking fabric"
           }
         }
       },
