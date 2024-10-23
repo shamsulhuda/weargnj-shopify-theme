@@ -100,26 +100,13 @@
                 </p>
                 {% if section.settings.show_payment_methods %}
                 <div class="payment__method">
-  
+                    {% for block in section.blocks %}
+                    {% if block.type == 'payment' %}
                     <div class="method">
-                        <img src="assets/img/card/1.png" alt="">
+                        <img src="{{ block.settings.payment_icon | img_url:'original' }}" alt="Payment">
                     </div>
-                    <div class="method">
-                        <img src="assets/img/card/2.png" alt="">
-                    </div>
-                    <div class="method">
-                        <img src="assets/img/card/3.png" alt="">
-                    </div>
-                    <div class="method">
-                        <img src="assets/img/card/4.png" alt="">
-                    </div>
-                    <div class="method">
-                        <img src="assets/img/card/5.png" alt="">
-                    </div>
-                    <div class="method">
-                        <img src="assets/img/card/6.png" alt="">
-                    </div>
-  
+                    {% endif %}
+                    {% endfor %}
                 </div>
                 {% endif %}
             </div>
@@ -248,6 +235,17 @@
             "id": "enable_newsleter",
             "label": "Enable Newsleter",
             "default": true
+          }
+        ]
+      },
+      {
+        "type": "payment",
+        "name": "Payment icon",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Payment icon",
+            "id": "payment_icon"
           }
         ]
       }
