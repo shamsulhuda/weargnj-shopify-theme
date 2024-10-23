@@ -420,6 +420,15 @@
         "image": "shopify://shop_images/product-placeholder_99d0ef63-950e-4962-a6d2-660f0990cf2d.jpg",
         "position": false
       }
+    },
+    "best_selling_HwfPVW": {
+      "type": "best-selling",
+      "settings": {
+        "heading": "Our best seller for all-day Comfort",
+        "heading_2": "Shop the look",
+        "main_image": "shopify://shop_images/product-placeholder.jpg",
+        "collection": "build-a-bundle"
+      }
     }
   },
   "order": [
@@ -432,6 +441,7 @@
     "faq_section_btPwF7",
     "limited_edition_JDJKpH",
     "customer_video_review_9Aimwi",
-    "faq_section_g7GRMf"
+    "faq_section_g7GRMf",
+    "best_selling_HwfPVW"
   ]
 }
