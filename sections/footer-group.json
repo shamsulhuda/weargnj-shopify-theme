@@ -55,33 +55,15 @@
         "information_qAz9iR"
       ],
       "settings": {
+        "copyright_text": "&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved",
+        "show_payment_methods": true,
         "bg_color": "#ffffff",
         "padding_top": 50,
         "padding_bottom": 40
       }
-    },
-    "footer-bottom": {
-      "type": "footer-bottom",
-      "blocks": {
-        "copyright": {
-          "type": "copyright",
-          "settings": {
-            "copyright_text": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
-          }
-        }
-      },
-      "block_order": [
-        "copyright"
-      ],
-      "settings": {
-        "enable_dash": true,
-        "padding_top": 10,
-        "padding_bottom": 10
-      }
     }
   },
   "order": [
-    "footer",
-    "footer-bottom"
+    "footer"
   ]
 }
