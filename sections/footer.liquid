@@ -11,97 +11,13 @@
   padding-right: 30px;
 }
 {% endstyle %}
-<div class="footer-section">
-  <div class="container-fluid bg_container"  id="footer_{{ section.id }}">
-    <div class="container">
-      <div class="row">
-        {% for block in section.blocks %}
-          {% case block.type %}
-          {% when 'footer-menu' %}
-          <div class="col-md-{{- block.settings.column -}}">
-            <div class="heading">
-              <h2>{{ block.settings.heading }}</h2>
-            </div>
-            <div class="content">
-              <ul>
-                {% for link in block.settings.menu.links %}
-                <li>
-                  <a href="{{ link.url }}">{{ link.title }}</a>
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-          {% when 'information' %}
-          <div class="col-md-{{- block.settings.column -}}">
-            <div class="heading">
-              <h2>{{ block.settings.heading }}</h2>
-            </div>
-            <div class="rte">
-              {{ block.settings.information }}
-            </div>
-          </div>
-          {% when 'newsleter' %}
-            <div class="col-md-{{- block.settings.column -}}">
-              <div class="newslater-inner">
-                <div class="brand-logo">
-                {%- if block.settings.logo != blank -%}
-                  <div class="header__heading-logo-wrapper">
-                    {%- assign logo_alt = block.settings.logo.alt | default: shop.name | escape -%}
-                    {%- assign logo_height = settings.logo_width | divided_by: block.settings.logo.aspect_ratio -%}
-                    {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                    {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                    {{ block.settings.logo | image_url: width: 600 | image_tag:
-                      class: 'header__heading-logo motion-reduce',
-                      widths: widths,
-                      height: logo_height,
-                      width: settings.logo_width,
-                      alt: logo_alt,
-                      sizes: sizes,
-                      preload: true
-                    }}
-                  </div>
-                {%- else -%}
-                  <span class="h2">{{ shop.name }}</span>
-                {%- endif -%}
-                </div>
-                <div class="rte my-3">
-                  {{ block.settings.text }}
-                </div>
-                {% if block.settings.enable_newsleter %}
-                <div class="footer-newsletter">
-                  <form action="#">
-                    <div class="input-group mb-2 mr-sm-2">                      
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <button class="common__btn fill__btn" type="button">→</button>
-                          </div>
-                        </div>                      
-                      </div>
-                    <label>
-                      <input type="checkbox" name="checkbox" class="check-box" checked>      
-                      <span>I accept the terms of the newsletter</span>
-                    </label>
-                  </form>
-                </div>
-                {% endif %}
-              </div>
-            </div>
-          {% endcase %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="weargnj__foooter mt-25 mx-2">
   <div class="container">
       <div class="row">
         {% for block in section.blocks %}
           {% case block.type %}
           {% when 'newsleter' %}
-          <div class="col-lg-5">
+          <div class="col-lg-{{- block.settings.column -}}">
               <div class="footer__widget">
                   <a href="#" class="footer__logo mb-30 d-block">
                       {%- if block.settings.logo != blank -%}
@@ -145,56 +61,43 @@
                   {% endif %}
               </div>
           </div>
-          {% endcase %}
-        {% endfor %}
-          <div class="col-lg-7">
+          {% when 'footer-menu' %}
+          <div class="col-lg-{{- block.settings.column -}}">
               <div class="footer__widget">
-                  <div class="three__column">
-                      <div class="column">
-                          <div class="menu__widget footer__widget__content">
-                              <span class="widget__title">Navigate</span>
-                              <ul>
-                                  <li><a href="#">Home</a></li>
-                                  <li><a href="#">Core Collection</a></li>
-                                  <li><a href="#">Limited Edition</a></li>
-                                  <li><a href="#">Build Your Bundle</a></li>
-                                  <li><a href="#">About Us</a></li>
-                              </ul>
-                          </div>
-                      </div>
-
-                      <div class="column">
-                          <div class="menu__widget footer__widget__content">
-                              <span class="widget__title">Company</span>
-                              <ul>
-                                  <li><a href="#">Contact Us</a></li>
-                                  <li><a href="#">FAQ</a></li>
-                                  <li><a href="#">Terms of Use</a></li>
-                                  <li><a href="#">Cookie Policy</a></li>
-                                  <li><a href="#">Privacy Policy</a></li>
-                              </ul>
-                          </div>
-                      </div>
-
-                      <div class="column">
-                          <div class="menu__widget footer__widget__content">
-                              <span class="widget__title">Contact us</span>
-                              <ul>
-                                  <li><a href="#">support@weargnj.io</a></li>
-                                  <li><a href="#">+37129275555</a></li>
-                              </ul>
-                              <div class="weargnj__social">
-                                  <a href="#"><img src="assets/icons/facebook.svg" alt=""></a>
-                                  <a href="#"><img src="assets/icons/instagram.svg" alt=""></a>
-                                  <a href="#"><img src="assets/icons/twitter.svg" alt=""></a>
-                                  <a href="#"><img src="assets/icons/linkedin.svg" alt=""></a>
-                              </div>
-                          </div>
-                      </div>
-
-                  </div>
+                <div class="column">
+                    <div class="menu__widget footer__widget__content">
+                        <span class="widget__title">{{ block.settings.heading }}</span>
+                        <ul>
+                          {% for link in block.settings.menu.links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                    </div>
+                </div>
               </div>
           </div>
+          {% when 'information' %}
+          <div class="col-lg-{{- block.settings.column -}}">
+              <div class="footer__widget">
+                <div class="column">
+                    <div class="menu__widget footer__widget__content">
+                        <span class="widget__title">{{ block.settings.heading }}</span>
+                        <ul>
+                            <li><a href="#">support@weargnj.io</a></li>
+                            <li><a href="#">+37129275555</a></li>
+                        </ul>
+                        <div class="weargnj__social">
+                            <a href="#"><img src="assets/icons/facebook.svg" alt=""></a>
+                            <a href="#"><img src="assets/icons/instagram.svg" alt=""></a>
+                            <a href="#"><img src="assets/icons/twitter.svg" alt=""></a>
+                            <a href="#"><img src="assets/icons/linkedin.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            <div>
+        {% endcase %}
+      {% endfor %}
       </div>
       <div class="row">
           <div class="footer__copyright__wrapper">
