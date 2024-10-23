@@ -1,6 +1,113 @@
+<div class="weargnj__faq">
+    <div class="container-fluid">
+        <div class="">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="faq__left">
+                      {% if section.settings.image != blank %}
+                        <img src="{{ section.settings.image | img_url:'large' }}" alt="Faq image" height="676">
+                      {% else %}
+                        {{ 'product-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                      {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="faq__right">
+                      
+                        <div class="faq__header">
+                            <h3>Underwear should feel as good as it looks</h3>
+                            <p>
+                                We see our intimates as the starting point for all your greatest outfits, so they need to look and feel superior.
+                            </p>
+                        </div>
+                        <div class="faq__bottom">
+                            <ul>
+                              {% for block in section.blocks %}
+                                <li class="item">
+                                  {% if block.settings.icon != blank %}
+                                    <img src="assets/icons/modal.svg" alt="">
+                                  {% endif %}
+                                    <span>{{ block.settings.text }}</span>
+                                </li>
+                              {% endfor %}
+                                <li class="item">
+                                    <img src="assets/icons/climate.svg" alt="">
+                                    <span>Suitable for the hot and humid climate of GCC</span>
+                                </li>
+                                <li class="item">
+                                    <img src="assets/icons/style.svg" alt="">
+                                    <span>Shaped into soft-as-silk styles</span>
+                                </li>
+                                <li class="item">
+                                    <img src="assets/icons/quality.svg" alt="">
+                                    <span>Hypoallergenic moisture-wicking fabric</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Underwear should feel as good as it looks"
+      },
+      {
+        "type": "richtext",
+        "id": "rte",
+        "label": "Description",
+        "default": "<p>We see our intimates as the starting point for all your greatest outfits, so they need to look and feel superior.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Main image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ Content",
+        "settings": [
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Icon",
+            "options": [
+              {
+                "label": "Climate",
+                "value": "climate"
+              },
+              {
+                "label": "Modal",
+                "value": "modal"
+              },
+              {
+                "label": "Style",
+                "value": "style"
+              },
+              {
+                "label": "Quality",
+                "value": "quality"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Made from sustainably produced LENZING™ Modal"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
