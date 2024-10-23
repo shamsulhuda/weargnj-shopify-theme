@@ -4,7 +4,7 @@
   padding-bottom: {{ section.settings.padding_bottom | append: 'px'}};
 }
 {% endstyle %}
-<div class="weargnj__feature__area mt-80">
+<div class="weargnj__feature__area mt-80" id="section_{{ section.id }}">
   <div class="container-fluid">
       <div class="row">
         {% for block in section.blocks %}
@@ -44,7 +44,7 @@
         "max": 100,
         "step": 1,
         "unit": "px",
-        "default": 10
+        "default": 0
       },
       {
         "type": "range",
@@ -54,7 +54,7 @@
         "max": 100,
         "step": 1,
         "unit": "px",
-        "default": 10
+        "default": 0
       }
     ],
     "blocks": [
