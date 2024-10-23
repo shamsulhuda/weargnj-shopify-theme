@@ -438,6 +438,60 @@
         "btn_label": "More about Us",
         "btn_url": "#"
       }
+    },
+    "instagram_story_VeitNV": {
+      "type": "instagram-story",
+      "blocks": {
+        "story_cVX3AU": {
+          "type": "story",
+          "settings": {
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
+        },
+        "story_e7gXMH": {
+          "type": "story",
+          "settings": {
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
+        },
+        "story_AhmnKE": {
+          "type": "story",
+          "settings": {
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
+        },
+        "story_eBaxMc": {
+          "type": "story",
+          "settings": {
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
+        },
+        "story_36pyxB": {
+          "type": "story",
+          "settings": {
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "story_cVX3AU",
+        "story_e7gXMH",
+        "story_AhmnKE",
+        "story_eBaxMc",
+        "story_36pyxB"
+      ],
+      "settings": {
+        "heading": "Aspiring super-natural unite!",
+        "username": "@weargnj",
+        "insta_url": "",
+        "insta_btn": "Follow Us on Instagram",
+        "insta_btn_url": ""
+      }
     }
   },
   "order": [
@@ -452,6 +506,7 @@
     "customer_video_review_9Aimwi",
     "faq_section_g7GRMf",
     "best_selling_HwfPVW",
-    "simple_about_us_Tk9dYP"
+    "simple_about_us_Tk9dYP",
+    "instagram_story_VeitNV"
   ]
 }
