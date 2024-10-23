@@ -15,8 +15,3 @@
     /* z-index: 1; */
     padding: 140px 45px 55px;
 }
-.weargnj__banner .banner__content .banner__description {
-    max-width: 600px;
-    color: var(--common-white);
-    line-height: 32px;
-}
