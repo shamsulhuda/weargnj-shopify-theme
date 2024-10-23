@@ -1,7 +1,7 @@
 {% style %}
   #banner_{{ section.id }} .weargnj__banner{
     position: relative;
-    background-image: url('{{ section.settings.banner | img_url:'original' }}');
+    background-image: url('{{ section.settings.banner | image_url:'original' }}');
     height: 600px;
     background-repeat: no-repeat;
     min-height: 400px;
@@ -29,7 +29,7 @@
 {% endstyle %}
 {% endcomment %}
 <div id="banner_{{ section.id }}">
-  <div class="weargnj__banner banner__height" style="background-image: url(assets/img/banner/banner__bg.jpg);">
+  <div class="weargnj__banner banner__height">
     <div class="container-fluid">
         <div class="weargnj__menu__wrapper">
             <div class="row align-items-center">
