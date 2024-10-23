@@ -9,33 +9,31 @@
                       {% when 'heading' %}
                       <div class="content">
                         <h3>
-                            Save 18 when you bundle 2 <span>or more items!</span> 
+                            {{ block.settings.heading }}
                         </h3>                          
                       </div>
                       {% when 'description' %}
                       <div class="content">
-                        <p>
-                            Select 6 panties of your choice, add to cart, and enjoy up to 18% discount from your total amount.
-                        </p>
+                        {{ block.settings.rte }}
                       </div>
                       {% when 'bundle_item' %}
                       <div class="content-bottom">
-                          <span>Whats included</span>
+                          <span>{{ block.settings.title }}</span>
                           <div class="included__item">
 
                               <div class="item">
-                                  <div class="thumb" style="background-image: url(assets/img/offer/1.png);">
-                                      <h6><a href="#">Thong</a></h6>
+                                  <div class="thumb" style="background-image: url('{{ block.settings.image1 | img_url:'medium' }}');">
+                                      <h6><a href="#">{{ block.settings.title1 }}</a></h6>
                                   </div>
                               </div>
                               <div class="item">
-                                  <div class="thumb" style="background-image: url(assets/img/offer/2.png);">
-                                      <h6><a href="#">Briefs</a></h6>
+                                  <div class="thumb" style="background-image: url('{{ block.settings.image2 | img_url:'medium' }}');">
+                                      <h6><a href="#">{{ block.settings.title2 }}</a></h6>
                                   </div>
                               </div>
                               <div class="item">
-                                  <div class="thumb" style="background-image: url(assets/img/offer/3.png);">
-                                      <h6><a href="#">Limited Edition</a></h6>
+                                  <div class="thumb" style="background-image: url('{{ block.settings.image3 | img_url:'medium' }}');">
+                                      <h6><a href="#">{{ block.settings.title3 }}</a></h6>
                                   </div>
                               </div>
 
@@ -148,7 +146,7 @@
             "type": "text",
             "id": "title2",
             "label": "Title",
-            "default": "Thong"
+            "default": "Briefs"
           },
           {
             "type": "image_picker",
@@ -168,7 +166,7 @@
             "type": "text",
             "id": "title3",
             "label": "Title",
-            "default": "Thong"
+            "default": "Limited Edition"
           },
           {
             "type": "image_picker",
