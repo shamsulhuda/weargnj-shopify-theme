@@ -21,21 +21,7 @@
               <div class="footer__widget">
                   <a href="#" class="footer__logo mb-30 d-block">
                       {%- if block.settings.logo != blank -%}
-                      <div class="header__heading-logo-wrapper">
-                        {%- assign logo_alt = block.settings.logo.alt | default: shop.name | escape -%}
-                        {%- assign logo_height = settings.logo_width | divided_by: block.settings.logo.aspect_ratio -%}
-                        {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                        {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                        {{ block.settings.logo | image_url: width: 600 | image_tag:
-                          class: 'header__heading-logo motion-reduce',
-                          widths: widths,
-                          height: logo_height,
-                          width: settings.logo_width,
-                          alt: logo_alt,
-                          sizes: sizes,
-                          preload: true
-                        }}
-                      </div>
+                        {{ block.settings.logo | image_url:'original' | image_tag }}
                     {%- else -%}
                       <span class="h2">{{ shop.name }}</span>
                     {%- endif -%}
