@@ -1,11 +1,6 @@
 
-{% style %}
-   #banner_{{ section.id }} .weargnj__banner{
-    background-image: url('{{ section.settings.banner | img_url:'original' }}');
-  }
-{% endstyle %}
 <div id="#banner_{{ section.id }}">
-  <div class="weargnj__banner banner__height">  
+  <div class="weargnj__banner banner__height" style="background-image: url('{{ section.settings.banner | img_url:'original' }}');">  
     <div class="container-fluid">
         <div class="row">
             <div class="banner__content">
