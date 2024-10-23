@@ -486,6 +486,24 @@
             "user_name": "@doctor-staci",
             "user_url": ""
           }
+        },
+        "story_V9KfRz": {
+          "type": "story",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "user_img": "shopify://shop_images/author.png",
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
+        },
+        "story_37qP49": {
+          "type": "story",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg",
+            "user_img": "shopify://shop_images/author.png",
+            "user_name": "@doctor-staci",
+            "user_url": ""
+          }
         }
       },
       "block_order": [
@@ -493,7 +511,9 @@
         "story_e7gXMH",
         "story_AhmnKE",
         "story_eBaxMc",
-        "story_36pyxB"
+        "story_36pyxB",
+        "story_V9KfRz",
+        "story_37qP49"
       ],
       "settings": {
         "heading": "Aspiring super-natural unite!",
