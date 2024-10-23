@@ -1,6 +1,102 @@
+<div class="weargnj__item__of__the__day mt-80">
+  <div class="container-fluid">
+      <div class="row g-0">
+          <div class="col-lg-6">
+              <div class="left__side">
+                  <div class="left__side__background">
+                      <img src="{{ section.settings.main_image | img_url:'large' }}" alt="{{ section.settings.heading }}">
+                      <h4 class="title">{{ section.settings.heading }}</h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="right__side">
+                  <div class="content-block">
+                      <h5 class="text-center mb-5">{{ section.settings.heading_2 }}</h5>
+                      <div class="item__of__day__slider overflow-hidden position-relative">
+                          <div class="swiper-wrapper">
+                            {% for product in section.settings.collection.products %}
+                              <div class="swiper-slide">
+                                  <div class="best__seller__item">
+                                      <div class="best__seller__thumb">
+                                          <a href="{{ product.url }}">
+                                              <img src="{{ product.featured_image | img_url:'medium' }}" alt="{{ product.title }}">
+                                          </a>
+                                          <div class="special__tags">
+                                              <div class="best-seller">
+                                                  {% render 'icons', icon: 'verified-check', size: 16 %}
+                                                  <span>Best Seller</span>
+                                              </div>
+                                              <div class="bundle">
+                                                  {% render 'icons', icon: 'gift', size: 16 %}
+                                                  <span>Bundle</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="best__seller__content">
+                                          <h6><a href="{{ product.url }}">{{ product.title }}</a></h6>
+                                          
+                                          <div class="product__meta">
+                                              <div class="size">
+                                                  {% render 'icons', icon: 'underpant', size: 18 %} 
+                                                  <span>Seamless Comfort</span>
+                                              </div>
+                                              <div class="fabric">
+                                                  {% render 'icons', icon: 'ruler', size: 18 %} 
+                                                  <span>Shaping Fit</span>
+                                              </div>
+                                          </div>
+                                          <div class="product__price">
+                                              <div class="price">
+                                                  <span class="current__price">{{ product.price }}</span>
+                                                  <span class="old__price">$150.00</span>
+                                              </div>
+                                              <form action="#">
+                                                  <button type="submit" class="cart__btn">Add To Cart</button>
+                                              </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              {% endfor %}
+                          </div>
+                          <div class="swiper-pagination position-relative mt-20">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Best Selling products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our best seller for all-day Comfort"
+      },
+      {
+        "type": "text",
+        "id": "heading_2",
+        "label": "Heading 2",
+        "default": "Shop the look"
+      },
+      {
+        "type": "image_picker",
+        "id": "main_image",
+        "label": "Image"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Best selling collection"
+      }
+    ]
   }
 {% endschema %}
