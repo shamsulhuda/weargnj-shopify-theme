@@ -21,7 +21,9 @@
               <div class="single__collection" style="background-image: url('{{ img }}');">
                   <div class="single__collection__brief">
                       <h2 class="collection__title">{{ collection.title | default: 'Thong' }}</h2>
-                      <a href="{{ collection.url | default:'#' }}" class="common__btn fill__btn">Shop Brief</a>
+                      <form action="#">
+                        <a href="{{ collection.url | default:'#' }}" class="common__btn fill__btn">Shop Brief</a>                        
+                      </form>
                   </div>
               </div>
           </div>
