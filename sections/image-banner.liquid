@@ -1,7 +1,7 @@
 
 {% style %}
    #banner_{{ section.id }} .weargnj__banner{
-    background-image: url('{{ section.settings.banner | image_url:'original' }}');
+    background-image: url('{{ section.settings.banner | img_url:'original' }}');
   }
 {% endstyle %}
 <div id="#banner_{{ section.id }}">
