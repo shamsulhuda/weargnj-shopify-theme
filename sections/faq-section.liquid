@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6{% unless section.settings.position %} order-md-2{% endunless %}">
                     <div class="faq__left">
                       {% if section.settings.image != blank %}
                         <img src="{{ section.settings.image | img_url:'large' }}" alt="Faq image" height="676">
@@ -11,7 +11,7 @@
                       {% endif %}
                     </div>
                 </div>
-                <div class="col-lg-6{% if section.settings.position %} order-md-1{% endif %}">
+                <div class="col-lg-6{% unless section.settings.position %} order-md-1{% endunless %}">
                     <div class="faq__right">
                       
                         <div class="faq__header">
