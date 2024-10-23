@@ -18,7 +18,7 @@
                             Select 6 panties of your choice, add to cart, and enjoy up to 18% discount from your total amount.
                         </p>
                       </div>
-                      {% if block.type == 'bundle_item' %}
+                      {% when 'bundle_item' %}
                       <div class="content-bottom">
                           <span>Whats included</span>
                           <div class="included__item">
@@ -41,7 +41,6 @@
 
                           </div>
                       </div>
-                      {% endif %}
                       {% endcase %}
                       {% endfor %}
                   </div>
@@ -49,8 +48,12 @@
               <div class="col-lg-6">
                   <div class="bundle__right">
                       <div class="bundle__right__thumb">
-                          <img src="assets/img/offer/4.png" alt="" height="590">
-                          <button class="common__btn fill__btn">Build A Chick Bundle</button>
+                        {% if section.settings.main_img != blank %}
+                          <img src="{{ section.settings.main_img | img_url:'original' }}" alt="bundle-image" height="590">
+                        {% else %}
+                          {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% endif %}
+                          <a href="{{ section.settings.btn_url }}" class="common__btn fill__btn">{{ section.settings.btn_label }}</a>
                       </div>
                   </div>
               </div>
@@ -66,6 +69,17 @@
         "type": "image_picker",
         "id": "main_img",
         "label": "Main Image"
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button label",
+        "default": "Build A Chick Bundle" 
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button url"
       }
     ],
     "blocks": [
