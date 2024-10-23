@@ -19,6 +19,8 @@
                            <a href="#" class="insta__thumb">
                              {% if block.settings.image != blank %}
                                <img src="{{ block.settings.image | img_url:'medium' }}" alt="{{ block.settings.user_name }}">
+                              {% else %}
+                               {{ 'product-apparel-3' | placeholder_svg_tag: 'placeholder-svg' }}
                              {% endif %}
                            </a>
                        </div>
