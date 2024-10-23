@@ -35,7 +35,7 @@
         "card_2": {
           "type": "card",
           "settings": {
-            "icon": "underpant",
+            "icon": "sizing-round",
             "size": 56,
             "heading": "Sizing Information",
             "description": "<p>Refer to our size chart for accurate measurements and fitting.</p>"
@@ -44,7 +44,7 @@
         "card_3": {
           "type": "card",
           "settings": {
-            "icon": "eco-power",
+            "icon": "eco-round",
             "size": 56,
             "heading": "Eco-friendly Certifications",
             "description": "<p>Our products are crafted of certified sustainable materials.</p>"
