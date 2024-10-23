@@ -29,7 +29,7 @@
                                     </div>
                                 </div>
                                 <p class="testimonial__text">
-                                    Allow an average of 3/5 working days to receive your package in mainland.
+                                    {{ block.settings.comment }}
                                 </p>
                             </div>
                         </div>
@@ -75,6 +75,12 @@
               "youtube"
             ],
             "info": "Accepted: vimeo, youtube"
+          },
+          {
+            "type": "html",
+            "id": "comment",
+            "label": "Comment",
+            "default": "Allow an average of 3/5 working days to receive your package in mainland."
           },
           {
             "type": "select",
