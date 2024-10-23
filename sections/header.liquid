@@ -10,17 +10,20 @@
                   <div class="weargnj__main__menu">
                       <nav>
                           <ul class="list-unstyled d-flex">
-                              <li class="nav-item dropdown">
-                                  <a href="#">Shop All</a>
-                                  <ul class="dropdown-menu d-none">
-                                      <li><a href="#">Shop All</a></li>
-                                      <li><a href="#">Shop All</a></li>
-                                      <li><a href="#">Shop All</a></li>
-                                  </ul>
+                            {% for link in links %}
+                              <li class="{% if forloop.index == button_index and button_index != blank %} special__text{% endif %}"{% if link.links.size > 1 %} dropdown{% endif %}>
+                                <a href="{{ link.url }}" class="{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
+                                  {{ link.title }} {% if forloop.index == button_index and button_index != blank %}<span>{{ custom_txt }}</span>{% endif %}
+                                </a>
+                                {% if link.links.size > 1 %}
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
+                                  {% for child in link.links %}
+                                  <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
+                                  {% endfor %}
+                                </ul>
+                                {% endif %}
                               </li>
-                              <li class="special__text">Bundle & Save <span>4 for 15% off</span></li>
-                              <li><a href="#">Limited Edition</a></li>
-                              <li><a href="#">About</a></li>
+                            {% endfor %}
                           </ul>
                       </nav>
                   </div>
@@ -28,8 +31,26 @@
           </div>
           <div class="col-lg-1">
               <div class="logo__block">
-                  <a href="index.html">
-                      <img src="assets/img/logo/logo.svg" alt="">
+                  <a href="{{ routes.root_url }}">
+                      {%- if settings.logo != blank -%}
+                      <div class="header__heading-logo-wrapper">
+                        {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                        {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                        {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+                        {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                        {{ settings.logo | image_url: width: 600 | image_tag:
+                          class: 'header__heading-logo motion-reduce',
+                          widths: widths,
+                          height: logo_height,
+                          width: settings.logo_width,
+                          alt: logo_alt,
+                          sizes: sizes,
+                          preload: true
+                        }}
+                      </div>
+                    {%- else -%}
+                      <span class="h2">{{ shop.name }}</span>
+                    {%- endif -%}
                   </a>
               </div>
           </div>
@@ -38,16 +59,18 @@
                   <form action="#" method="post" class="search__form">
                       <div class="input-box">
                           <input type="text" placeholder="Search here...">
-                          <img class="search" src="assets/icons/search.svg" alt="">
+                          <span>{% render 'icons', icon: 'search', size:20 %}</span>
                       </div>
                   </form>
                   <div class="user__profile">
-                      <button><img src="assets/icons/user.svg" alt="user"></button>
+                      <button>
+                        <span>{% render 'icons', icon: 'user', size:20 %}</span>
+                      </button>
                   </div>
                   <div class="cart__bag">
                       <button>
                           <span class="cart__count">2</span>
-                          <img src="assets/icons/shopping-bag.svg" alt="">
+                          <span>{% render 'icons', icon: 'shopping-bag', size:20 %}</span>
                       </button>
                   </div>
               </div>
@@ -55,80 +78,6 @@
       </div>
   </div>
 </div>
-
-  
-<!-- <div class="header-area text-body transparent_header">
-  <div class="container-fluid">
-    <div class="header-nav px-5">
-        <div class="row align-items-center">
-          <div class="col-lg-5">
-            <nav class="navbar navbar-expand-lg text-light bg-dark bg-transparent">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  {% for link in links %}
-                    <li class="nav-item{% if forloop.index == button_index and button_index != blank %} custom_btn{% endif %}"{% if link.links.size > 1 %} dropdown{% endif %}>
-                      <a class="nav-link{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
-                        {{ link.title }} {% if forloop.index == button_index and button_index != blank %}<span>{{ custom_txt }}</span>{% endif %}
-                      </a>
-                      {% if link.links.size > 1 %}
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown_{{ forloop.index }}">
-                        {% for child in link.links %}
-                        <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
-                        {% endfor %}
-                      </ul>
-                      {% endif %}
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="col-lg-2 text-center">
-            <a class="navbar-brand d-none d-md-block" href="{{ routes.root_url }}">
-               {%- if settings.logo != blank -%}
-                <div class="header__heading-logo-wrapper">
-                  {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                  {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                  {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                  {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                  {{ settings.logo | image_url: width: 600 | image_tag:
-                    class: 'header__heading-logo motion-reduce',
-                    widths: widths,
-                    height: logo_height,
-                    width: settings.logo_width,
-                    alt: logo_alt,
-                    sizes: sizes,
-                    preload: true
-                  }}
-                </div>
-              {%- else -%}
-                <span class="h2">{{ shop.name }}</span>
-              {%- endif -%}
-            </a>
-          </div>
-          <div class="col-lg-5 text-end">
-            <ul class="list-inline text-light">
-              <li class="list-inline-item">
-                <a class="nav-link" href="#">Search</a>
-              </li>
-              <li class="list-inline-item">
-                <a class="nav-link">Account</a>
-              </li>
-              <li class="list-inline-item">
-                <a class="nav-link">Cart</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </div>
-  </div>
-
-
-  
-</div> -->
 {% schema %}
 {
   "name": "Header",
