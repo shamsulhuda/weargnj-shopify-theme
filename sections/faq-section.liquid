@@ -25,23 +25,11 @@
                               {% for block in section.blocks %}
                                 <li class="item">
                                   {% if block.settings.icon != blank %}
-                                    <img src="assets/icons/modal.svg" alt="">
+                                    {% render 'icons', icon: block.settings.icon %}
                                   {% endif %}
                                     <span>{{ block.settings.text }}</span>
                                 </li>
-                              {% endfor %}
-                                <li class="item">
-                                    <img src="assets/icons/climate.svg" alt="">
-                                    <span>Suitable for the hot and humid climate of GCC</span>
-                                </li>
-                                <li class="item">
-                                    <img src="assets/icons/style.svg" alt="">
-                                    <span>Shaped into soft-as-silk styles</span>
-                                </li>
-                                <li class="item">
-                                    <img src="assets/icons/quality.svg" alt="">
-                                    <span>Hypoallergenic moisture-wicking fabric</span>
-                                </li>
+                              {% endfor %}                               
                             </ul>
                         </div>
                     </div>
