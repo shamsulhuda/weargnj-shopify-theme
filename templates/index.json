@@ -177,6 +177,51 @@
         "btn_label": "Build A Chick Bundle",
         "btn_url": ""
       }
+    },
+    "marquee_text_section_Vzy78c": {
+      "type": "marquee-text-section",
+      "blocks": {
+        "text_cNGJgL": {
+          "type": "text",
+          "settings": {
+            "text": "<b>Free shipping</b> now and forever",
+            "icon": "award",
+            "icon_size": 48
+          }
+        },
+        "text_br9HbF": {
+          "type": "text",
+          "settings": {
+            "text": "<b>Free shipping</b> now and forever",
+            "icon": "sale-tag",
+            "icon_size": 48
+          }
+        },
+        "text_mRjYHi": {
+          "type": "text",
+          "settings": {
+            "text": "<b>Free shipping</b> now and forever",
+            "icon": "money-back",
+            "icon_size": 48
+          }
+        },
+        "text_PPjJcc": {
+          "type": "text",
+          "settings": {
+            "text": "<b>Free shipping</b> now and forever",
+            "icon": "award",
+            "icon_size": 48
+          }
+        }
+      },
+      "block_order": [
+        "text_cNGJgL",
+        "text_br9HbF",
+        "text_mRjYHi",
+        "text_PPjJcc"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -184,6 +229,7 @@
     "quality_section_NHaBwq",
     "featured_collection",
     "categories_KcKajr",
-    "bundle_offer_tXtXE9"
+    "bundle_offer_tXtXE9",
+    "marquee_text_section_Vzy78c"
   ]
 }
