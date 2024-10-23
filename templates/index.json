@@ -95,6 +95,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "heading": "Our Best Sellers",
         "collection": "build-a-bundle",
         "padding_top": 30,
         "padding_bottom": 30
@@ -131,9 +132,50 @@
         "category_rUYjKi"
       ],
       "settings": {
-        "title": "Our Collections",
+        "heading": "Our Collections",
         "padding_top": 10,
         "padding_bottom": 30
+      }
+    },
+    "bundle_offer_tXtXE9": {
+      "type": "bundle-offer",
+      "blocks": {
+        "heading_fDTEfp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Save 18 when you bundle 2 <span>or more items!</span>"
+          }
+        },
+        "description_bdpDgK": {
+          "type": "description",
+          "settings": {
+            "rte": "<p>Select 6 panties of your choice, add to cart, and enjoy up to 18% discount from your total amount.</p>"
+          }
+        },
+        "bundle_item_Fewe68": {
+          "type": "bundle_item",
+          "settings": {
+            "title": "Whats included",
+            "title1": "Thong",
+            "image1": "shopify://shop_images/product-placeholder.jpg",
+            "url1": "",
+            "title2": "Briefs",
+            "image2": "shopify://shop_images/product-placeholder.jpg",
+            "url2": "",
+            "title3": "Limited Edition",
+            "image3": "shopify://shop_images/product-placeholder.jpg",
+            "url3": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_fDTEfp",
+        "description_bdpDgK",
+        "bundle_item_Fewe68"
+      ],
+      "settings": {
+        "btn_label": "Build A Chick Bundle",
+        "btn_url": ""
       }
     }
   },
@@ -141,6 +183,7 @@
     "image_banner",
     "quality_section_NHaBwq",
     "featured_collection",
-    "categories_KcKajr"
+    "categories_KcKajr",
+    "bundle_offer_tXtXE9"
   ]
 }
