@@ -121,7 +121,7 @@
     
     Counterup: function (e) {
       $(document).ready(function () {
-        $('.th__back__to__top').counterUp({
+        $('.counter').counterUp({
           delay: 50,
           time: 2000,
         });
