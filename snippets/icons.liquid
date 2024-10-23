@@ -63,6 +63,14 @@
     <svg width="{{ size | default:24 }}" height="{{ size | default:24 }}" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M6.3886 0H13.6116C15.5669 0 17.2357 1.41365 17.5572 3.3424L19.2238 13.3424C19.6302 15.7805 17.75 18 15.2783 18H4.72194C2.25018 18 0.370007 15.7805 0.776361 13.3424L2.44303 3.3424C2.76449 1.41365 4.43325 0 6.3886 0ZM10.0001 7.75C12.0712 7.75 13.7501 6.07107 13.7501 4V3C13.7501 2.58579 13.4143 2.25 13.0001 2.25C12.5859 2.25 12.2501 2.58579 12.2501 3V4C12.2501 5.24264 11.2427 6.25 10.0001 6.25C8.75746 6.25 7.7501 5.24264 7.7501 4V3C7.7501 2.58579 7.41431 2.25 7.0001 2.25C6.58588 2.25 6.2501 2.58579 6.2501 3V4C6.2501 6.07107 7.92903 7.75 10.0001 7.75Z" fill="#23232A"/>
     </svg>
+{% when 'chevron-right' %}
+    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 13L1 7L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+{% when 'chevron-left' %}
+    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 13L7 7L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
 
 
 {% endcase %}
