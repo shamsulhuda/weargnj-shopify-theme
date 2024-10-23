@@ -17,21 +17,37 @@
         "card": {
           "type": "card",
           "settings": {
+            "icon": "shipping",
+            "size": 56,
+            "heading": "Shipping & Returns",
+            "description": "<p>Get your item in 2-5 business days, and return them within 90 days of purchase.</p>"
           }
         },
         "card_1": {
           "type": "card",
           "settings": {
+            "icon": "secure",
+            "size": 56,
+            "heading": "Secure Payment Options",
+            "description": "<p>Pay stress free with any of our numerous payment options.</p>"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
+            "icon": "underpant",
+            "size": 56,
+            "heading": "Sizing Information",
+            "description": "<p>Refer to our size chart for accurate measurements and fitting.</p>"
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
+            "icon": "eco-power",
+            "size": 56,
+            "heading": "Eco-friendly Certifications",
+            "description": "<p>Our products are crafted of certified sustainable materials.</p>"
           }
         }
       },
@@ -42,6 +58,9 @@
         "card_3"
       ],
       "settings": {
+        "enable_dash": true,
+        "padding_top": 10,
+        "padding_bottom": 10
       }
     },
     "footer": {
