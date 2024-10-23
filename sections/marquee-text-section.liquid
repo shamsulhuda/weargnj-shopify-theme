@@ -1,6 +1,72 @@
+<div class="weargnj__marque my-80">
+  <div class="marque__wrapper overflow-hidden">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="single__marque__item">
+                  <img src="assets/icons/sale-tag.png" alt="">
+                  <span><b>Free shipping</b> now and forever</span>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="single__marque__item">
+                  <img src="assets/icons/award.png" alt="">
+                  <span>Feel Comfortable <b>Guarantee</b></span>
+              </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="single__marque__item">
+                  <img src="assets/icons/money-back.png" alt="">
+                  <span><b>Love it</b> or moneyback</span>
+              </div>
+          </div>
+
+          <div class="swiper-slide">
+              <div class="single__marque__item">
+                  <img src="assets/icons/sale-tag.png" alt="">
+                  <span><b>Free shipping</b> now and forever</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Marquee Section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Marquee text",
+        "settings": [
+          {
+            "type": "html",
+            "id": "text",
+            "label": "Text",
+            "default": "<b>Free shipping</b> now and forever"
+          },
+          {
+            "type": "select",
+            "id": "icon",
+            "label": "Select icon",
+            "options": [
+              {
+                "label": "Award",
+                "value": "award"
+              },
+              {
+                "label": "Money back",
+                "value": "money-back"
+              },
+              {
+                "label": "Sale",
+                "value": "sale-tag"
+              }
+            ],
+            "default": "award"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
