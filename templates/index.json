@@ -222,6 +222,50 @@
       ],
       "settings": {
       }
+    },
+    "faq_section_btPwF7": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_a4cVkW": {
+          "type": "faq",
+          "settings": {
+            "icon": "modal",
+            "text": "Made from sustainably produced LENZING™ Modal"
+          }
+        },
+        "faq_83GbbW": {
+          "type": "faq",
+          "settings": {
+            "icon": "modal",
+            "text": "Made from sustainably produced LENZING™ Modal"
+          }
+        },
+        "faq_hCM6eg": {
+          "type": "faq",
+          "settings": {
+            "icon": "modal",
+            "text": "Made from sustainably produced LENZING™ Modal"
+          }
+        },
+        "faq_E9yLba": {
+          "type": "faq",
+          "settings": {
+            "icon": "modal",
+            "text": "Made from sustainably produced LENZING™ Modal"
+          }
+        }
+      },
+      "block_order": [
+        "faq_a4cVkW",
+        "faq_83GbbW",
+        "faq_hCM6eg",
+        "faq_E9yLba"
+      ],
+      "settings": {
+        "heading": "Underwear should feel as good as it looks",
+        "rte": "<p>We see our intimates as the starting point for all your greatest outfits, so they need to look and feel superior.</p>",
+        "image": "shopify://shop_images/product-placeholder.jpg"
+      }
     }
   },
   "order": [
@@ -230,6 +274,7 @@
     "featured_collection",
     "categories_KcKajr",
     "bundle_offer_tXtXE9",
-    "marquee_text_section_Vzy78c"
+    "marquee_text_section_Vzy78c",
+    "faq_section_btPwF7"
   ]
 }
