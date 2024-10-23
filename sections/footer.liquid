@@ -96,8 +96,9 @@
       <div class="row">
             <div class="footer__copyright__wrapper">
                 <p class="copyright">
-                    &copy; 2024 weargnj All rights reserved.
+                    {{ section.settings.copyright_text }}
                 </p>
+                {% if section.settings.show_payment_methods %}
                 <div class="payment__method">
   
                     <div class="method">
@@ -120,6 +121,7 @@
                     </div>
   
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -131,6 +133,18 @@
       "groups": ["footer"]
     },
     "settings": [
+      {
+        "type": "liquid",
+        "id": "copyright_text",
+        "label": "Copyright text",
+        "default": "<p>&copy;{{ 'now' | date: '%Y' }} {{ shop.name }} All Rights reserved</p>"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payment_methods",
+        "label": "Show Payment Methods",
+        "default": true
+      },
       {
         "type": "color",
         "id": "bg_color",
