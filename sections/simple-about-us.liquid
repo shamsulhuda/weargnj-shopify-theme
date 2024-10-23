@@ -1,17 +1,17 @@
 <div class="weargnj__about mx-2 mt-80">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="about__content">
-                    <a href="{{ routes.root_url }}"><img src="{{ section.settings.image | img_url:'small' }}" alt="{{ shop.name }}"></a>
-                    <p class="about__text">
-                       {{ section.settings.description }}
-                    </p>
-                    <button class="common__btn fill__btn black__btn">
-                        {{ section.settings.btn_label }}
-                    </button>
-            </div>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="about__content">
+            <a href="{{ routes.root_url }}"><img src="{{ section.settings.image | img_url:'small' }}" alt="{{ shop.name }}"></a>
+            <p class="about__text">
+               {{ section.settings.description }}
+            </p>
+            <button class="common__btn fill__btn black__btn">
+                {{ section.settings.btn_label }}
+            </button>
         </div>
-    </div>
+      </div>
+  </div>
     <!-- about us end -->
 </div>
 {% schema %}
