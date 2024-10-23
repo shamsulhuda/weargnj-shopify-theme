@@ -40,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center mt-4">
-                <button class="common__btn fill__btn black__btn">Read More Reviews</button>
+                <a href="{{ section.settings.btn_url }}" class="common__btn fill__btn black__btn">{{ section.settings.btn_label }}</a>
             </div>
         </div>
     </div>
@@ -54,6 +54,17 @@
         "id": "heading",
         "label": "Heading",
         "default": "98 <span class='percent'>%</span> customers would buy again"
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button label",
+        "default": "Read More Reviews"
+      },
+      {
+        "type": "text",
+        "id": "btn_url",
+        "label": "Button Link"
       }
     ],
     "blocks": [
