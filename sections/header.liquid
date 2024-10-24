@@ -109,20 +109,27 @@
   <!-- Endof mobile menu -->
 </div>
 <script>
+// Function to toggle both "mobileMenu" and "d-none" classes
 function toggleMobileMenuClass() {
   const menuBlock = document.querySelector('.menu__block');
-  const mobileWidth = window.matchMedia('(max-width: 767px)'); // Define the mobile breakpoint
+  const mobileWidth = window.matchMedia('(max-width: 767px)');
 
   if (mobileWidth.matches) {
-    // If viewport width matches mobile size, toggle the class
-    menuBlock.classList.add('mobileMenu');
+    // Toggling the classes on click only when in mobile view
+    const menuButton = document.querySelector('.menu-toggle-button');
+    
+    menuButton.addEventListener('click', function() {
+      // Toggle both "mobileMenu" and "d-none" classes
+      menuBlock.classList.toggle('mobileMenu');
+      menuBlock.classList.toggle('d-none');
+    });
   } else {
-    // If the viewport width exceeds mobile size, remove the class
-    menuBlock.classList.remove('mobileMenu');
+    // On larger screens, ensure the classes are removed
+    menuBlock.classList.remove('mobileMenu', 'd-none');
   }
 }
 
-// Run the function on page load and when window is resized
+// Run on page load and window resize
 window.addEventListener('resize', toggleMobileMenuClass);
 window.addEventListener('load', toggleMobileMenuClass);
 </script>
