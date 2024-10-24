@@ -10,7 +10,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="feature__wrapper">
-              <div class="swiper-container">
               {% for block in section.blocks %}
                 {% assign size = block.settings.size | default: 24 %}
                 <div class="swiper-slide feature__bloc">
@@ -18,7 +17,6 @@
                     <span>{{ block.settings.text }}</span>
                 </div>
                 {% endfor %}
-              </div>
             </div>
         </div>
     </div>
