@@ -827,6 +827,16 @@ img {
   }
 }
 @media (max-width: 1024px){
+  .menu__block.mobileMenu {
+    position: absolute;
+    width: 768px;
+    overflow-x: auto; /* Use auto to enable scroll when necessary */
+    white-space: nowrap; /* Prevent child elements from wrapping */
+}
+
+.menu__block.mobileMenu > * {
+    display: inline-block; /* Make sure child elements are inline to enable horizontal scrolling */
+}
   .weargnj__main__menu ul {
       gap: 20px;
   }
