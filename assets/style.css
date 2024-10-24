@@ -827,6 +827,9 @@ img {
   }
 }
 @media (max-width: 1024px){
+  .weargnj__main__menu ul {
+      gap: 20px;
+  }
   .weargnj__main__menu ul li a {
       font-size: 11px;
       color: var(--common-white);
