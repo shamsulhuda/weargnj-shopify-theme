@@ -111,21 +111,27 @@
 <script>
 function toggleMobileMenuClass() {
   const menuBlock = document.querySelector('.menu__block');
-  const mobileWidth = window.matchMedia('(max-width: 767px)');
+  const mobileWidth = window.matchMedia('(max-width: 767px)'); // Define your mobile breakpoint
 
   if (mobileWidth.matches) {
-    // Keep toggling the menu on click when it's mobile
-    const menuButton = document.querySelector('.menu-toggle-button');
+    // Only toggle the classes when in mobile view
+    const menuButton = document.querySelector('.mobileMenuBar');
+    
     menuButton.addEventListener('click', function() {
-      menuBlock.classList.toggle('mobileMenu');
+      // Add "mobileMenu" class and remove "d-none" class
+      menuBlock.classList.add('mobileMenu');
+      menuBlock.classList.remove('d-none');
     });
   } else {
-    // Ensure the class is removed when not in mobile view
+    // Ensure both classes are reset when on desktop
     menuBlock.classList.remove('mobileMenu');
+    menuBlock.classList.add('d-none');
   }
 }
-  window.addEventListener('resize', toggleMobileMenuClass);
-  window.addEventListener('load', toggleMobileMenuClass);
+
+// Run on page load and when window is resized
+window.addEventListener('resize', toggleMobileMenuClass);
+window.addEventListener('load', toggleMobileMenuClass);
 </script>
 {% schema %}
 {
