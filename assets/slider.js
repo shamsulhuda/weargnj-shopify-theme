@@ -29,7 +29,7 @@
       $(document).ready(function(){  
 
         // Feature
-        var swiper = new Swiper(".swiper-container", {
+        var swiper = new Swiper(".feature__wrapper", {
           slidesPerView: 3,
           speed:1000,
           spaceBetween: 10,
