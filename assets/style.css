@@ -828,6 +828,9 @@ img {
       font-size: 11px;
       color: var(--common-white);
   }
+  .weargnj__main__menu ul .special__text {
+    padding: 8px 3px 8px 9px;
+  }
 }
 
 .th__offcanvas {
