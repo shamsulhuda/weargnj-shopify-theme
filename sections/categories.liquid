@@ -20,7 +20,7 @@
           <div class="col-lg-4 co-md-6">
               <div class="single__collection" style="background-image: url('{{ img }}');">
                   <div class="single__collection__brief">
-                      <h2 class="collection__title">{{ collection.title | default: 'Thong' }}</h2>
+                      <h2 class="collection__title">{{ block.settings.title | default: 'Thong' }}</h2>
                       <form action="#">
                         <a href="{{ collection.url | default:'#' }}" class="common__btn fill__btn">Shop Brief</a>                        
                       </form>
