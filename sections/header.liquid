@@ -109,13 +109,11 @@
   <!-- Endof mobile menu -->
 </div>
 <script>
-  document.querySelector(".mobileMenuBar").addEventListener("click", function() {
-      const menuBlock = document.querySelector(".menu__block");
-      if (menuBlock.classList.contains('d-none')) {
-          menuBlock.classList.remove('d-none');
-      }
-      menuBlock.classList.add('mobileMenu');
-  });
+ document.querySelector(".mobileMenuBar").addEventListener("click", function() {
+    const menuBlock = document.querySelector(".menu__block");
+    menuBlock.classList.toggle('d-none');
+    menuBlock.classList.toggle('mobileMenu');
+});
 </script>
 {% schema %}
 {
