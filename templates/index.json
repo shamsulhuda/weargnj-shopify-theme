@@ -107,6 +107,7 @@
         "category_XrDcwG": {
           "type": "category",
           "settings": {
+            "title": "Thong",
             "image": "shopify://shop_images/1_b87626d5-2c30-474a-9f1b-c178d20f335a.png",
             "collection": ""
           }
@@ -114,6 +115,7 @@
         "category_Y6xACf": {
           "type": "category",
           "settings": {
+            "title": "Briefs",
             "image": "shopify://shop_images/2_47a95351-e90c-4973-9b35-96a86578842f.png",
             "collection": ""
           }
@@ -121,6 +123,7 @@
         "category_rUYjKi": {
           "type": "category",
           "settings": {
+            "title": "Thong",
             "image": "shopify://shop_images/3_800713da-dc0f-4a14-b1d9-11495bccb89c.png",
             "collection": ""
           }
