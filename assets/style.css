@@ -831,6 +831,9 @@ img {
   .weargnj__main__menu ul .special__text {
     padding: 8px 3px 8px 9px;
   }
+  .search__block .search__form input {
+    padding: 8px 25px 8px 40px;
+  }
 }
 
 .th__offcanvas {
