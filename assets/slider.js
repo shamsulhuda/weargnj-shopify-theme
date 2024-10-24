@@ -31,7 +31,7 @@
         // TESTIMONIAL SLIDER ONE
         var swiper = new Swiper(".best__seller__slider", {
           slidesPerView: 3,
-          speed:1000,
+          speed:500,
           spaceBetween: 30,
           loop:true,
           navigation: {
