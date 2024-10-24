@@ -830,6 +830,7 @@ img {
   .menu__block.mobileMenu {
     position: absolute;
     width: 768px;
+    max-width: 790px;
     overflow-x: auto; /* Use auto to enable scroll when necessary */
     white-space: nowrap; /* Prevent child elements from wrapping */
 }
