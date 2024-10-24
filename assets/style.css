@@ -1026,6 +1026,7 @@ img {
 }
 .best__seller__item .best__seller__content {
   margin-top: 20px;
+  padding: 5px 10px;
 }
 .best__seller__item .best__seller__content .product__meta {
   display: flex;
