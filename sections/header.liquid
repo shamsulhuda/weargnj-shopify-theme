@@ -109,21 +109,16 @@
   <!-- Endof mobile menu -->
 </div>
 <script>
-function toggleMobileMenuClass() {
+function handleMobileMenu() {
   const menuBlock = document.querySelector('.menu__block');
-  const mobileWidth = window.matchMedia('(max-width: 767px)'); // Define your mobile breakpoint
+  const mobileWidth = window.matchMedia('(max-width: 767px)'); // Mobile breakpoint (you can adjust as needed)
 
   if (mobileWidth.matches) {
-    // Only toggle the classes when in mobile view
-    const menuButton = document.querySelector('.mobileMenuBar');
-    
-    menuButton.addEventListener('click', function() {
-      // Add "mobileMenu" class and remove "d-none" class
-      menuBlock.classList.add('mobileMenu');
-      menuBlock.classList.remove('d-none');
-    });
+    // If screen size is mobile (<= 767px), add "mobileMenu" and remove "d-none"
+    menuBlock.classList.add('mobileMenu');
+    menuBlock.classList.remove('d-none');
   } else {
-    // Ensure both classes are reset when on desktop
+    // If screen size is desktop (> 767px), remove "mobileMenu" and add "d-none"
     menuBlock.classList.remove('mobileMenu');
     menuBlock.classList.add('d-none');
   }
