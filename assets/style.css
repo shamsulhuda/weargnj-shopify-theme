@@ -833,11 +833,11 @@ img {
     max-width: 790px;
     overflow-x: auto; /* Use auto to enable scroll when necessary */
     white-space: nowrap; /* Prevent child elements from wrapping */
-}
+  }
 
-.menu__block.mobileMenu > * {
-    display: inline-block; /* Make sure child elements are inline to enable horizontal scrolling */
-}
+  .menu__block.mobileMenu > * {
+      display: inline-block; /* Make sure child elements are inline to enable horizontal scrolling */
+  }
   .weargnj__main__menu ul {
       gap: 20px;
   }
@@ -850,6 +850,9 @@ img {
   }
   .search__block .search__form input {
     padding: 8px 25px 8px 40px;
+  }
+  .best__seller__item .best__seller__content .product__price .price .current__price {
+    font-size: 20px;
   }
 }
 
