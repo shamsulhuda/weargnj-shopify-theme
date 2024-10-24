@@ -952,6 +952,12 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+@media(max-width:600px){
+  .banner__content .common__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1200px) {
   .weargnj__feature .feature__wrapper {
     flex-wrap: wrap;
