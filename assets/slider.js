@@ -26,7 +26,30 @@
     },
 
     swiperActivation: function(e){
-      $(document).ready(function(){        
+      $(document).ready(function(){  
+
+        // Feature
+        var swiper = new Swiper(".feature__wrapper", {
+          slidesPerView: 4,
+          speed:1000,
+          spaceBetween: 10,
+          loop:true,
+          breakpoints: {
+            375: {
+              slidesPerView: 1.2,
+            },
+            575: {
+              slidesPerView: 1.5,
+            },
+            768: {
+              slidesPerView: 2.5,
+            },
+            1200: {
+              slidesPerView: 4,
+            }
+          }
+          
+        });
         
         // TESTIMONIAL SLIDER ONE
         var swiper = new Swiper(".best__seller__slider", {
