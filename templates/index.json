@@ -160,13 +160,13 @@
           "settings": {
             "title": "Whats included",
             "title1": "Thong",
-            "image1": "shopify://shop_images/product-placeholder.jpg",
+            "image1": "shopify://shop_images/1_9d2f1670-ab16-4691-be3b-f053fc832180.png",
             "url1": "",
             "title2": "Briefs",
-            "image2": "shopify://shop_images/product-placeholder.jpg",
+            "image2": "shopify://shop_images/2_b6db8aac-faf1-4ace-87a1-b38f855fa7d6.png",
             "url2": "",
             "title3": "Limited Edition",
-            "image3": "shopify://shop_images/product-placeholder.jpg",
+            "image3": "shopify://shop_images/3_bca8866f-91a1-4fc7-a5a4-506f79df3dd8.png",
             "url3": ""
           }
         }
@@ -177,7 +177,7 @@
         "bundle_item_Fewe68"
       ],
       "settings": {
-        "main_img": "shopify://shop_images/product-placeholder.jpg",
+        "main_img": "shopify://shop_images/4_1835eac2-c750-4780-a8c7-dc6a96692fa3.png",
         "btn_label": "Build A Chick Bundle",
         "btn_url": ""
       }
