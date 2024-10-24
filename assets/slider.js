@@ -32,7 +32,6 @@
         var swiper = new Swiper(".feature__wrapper", {
           slidesPerView: 4,
           speed:1000,
-          spaceBetween: 20,
           loop:true,
           breakpoints: {
             375: {
