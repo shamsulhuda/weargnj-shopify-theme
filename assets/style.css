@@ -1645,7 +1645,7 @@ img {
   position: relative;
 }
 .weargnj__newsletter .newsletter__form input {
-  padding: 20px 24px;
+  padding: 16px 24px;
   border: 1px solid var(--primary-300);
   border-radius: 50px;
   font-size: 18px;
