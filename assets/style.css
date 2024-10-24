@@ -823,6 +823,12 @@ img {
     background-color: var(--common-white);
   }
 }
+@media (max-width: 1024px){
+  .weargnj__main__menu ul li a {
+      font-size: 11px;
+      color: var(--common-white);
+  }
+}
 
 .th__offcanvas {
   padding: 50px 40px;
