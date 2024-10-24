@@ -816,6 +816,14 @@ img {
   color: var(--rt-heading);
 }
 
+@media(max-width: 768px){
+  .search__block .user__profile button, .search__block .cart__bag button {
+    height: 42px;
+    width: 42px;
+    background-color: var(--common-white);
+  }
+}
+
 .th__offcanvas {
   padding: 50px 40px;
   background-color: #181818;
