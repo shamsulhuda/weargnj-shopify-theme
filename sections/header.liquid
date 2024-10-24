@@ -109,11 +109,22 @@
   <!-- Endof mobile menu -->
 </div>
 <script>
- document.querySelector(".mobileMenuBar").addEventListener("click", function() {
-    const menuBlock = document.querySelector(".menu__block");
-    menuBlock.classList.toggle('d-none');
-    menuBlock.classList.toggle('mobileMenu');
-});
+function toggleMobileMenuClass() {
+  const menuBlock = document.querySelector('.menu__block');
+  const mobileWidth = window.matchMedia('(max-width: 767px)'); // Define the mobile breakpoint
+
+  if (mobileWidth.matches) {
+    // If viewport width matches mobile size, toggle the class
+    menuBlock.classList.add('mobileMenu');
+  } else {
+    // If the viewport width exceeds mobile size, remove the class
+    menuBlock.classList.remove('mobileMenu');
+  }
+}
+
+// Run the function on page load and when window is resized
+window.addEventListener('resize', toggleMobileMenuClass);
+window.addEventListener('load', toggleMobileMenuClass);
 </script>
 {% schema %}
 {
