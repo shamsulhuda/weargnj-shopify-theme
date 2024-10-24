@@ -82,7 +82,7 @@
         })
         var swiper = new Swiper(".repeat__customer", {
           slidesPerView: 3.5,
-          speed:1500,
+          speed:1000,
           loop:true,
           autoplay: {
               disableOnInteraction: false,
