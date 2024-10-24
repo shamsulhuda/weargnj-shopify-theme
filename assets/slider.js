@@ -30,9 +30,9 @@
 
         // Feature
         var swiper = new Swiper(".feature__wrapper", {
-          slidesPerView: 4,
+          slidesPerView: 3,
           speed:1000,
-          spaceBetween: 40,
+          spaceBetween: 10,
           loop:true,
           breakpoints: {
             375: {
@@ -45,7 +45,7 @@
               slidesPerView: 2.5,
             },
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             }
           }
           
