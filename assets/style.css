@@ -1166,7 +1166,10 @@ img {
   border-bottom-left-radius: 15px;
 }
 .bundle__left .content {
-  margin-bottom: 70px;
+  margin-bottom: 20px;
+}
+.bundle__left .content-bottom {
+    margin-top: 35px;
 }
 @media screen and (max-width: 1200px) {
   .bundle__left .content {
