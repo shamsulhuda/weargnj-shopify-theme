@@ -1511,7 +1511,9 @@ img {
 .item__of__day__slider .best__seller__item .best__seller__content {
   padding: 0 8px 8px 8px;
 }
-
+.best__seller__content h6{
+  font-size: 24px;
+}
 /* about us section */
 .weargnj__about {
   background-color: #F1D5CE;
