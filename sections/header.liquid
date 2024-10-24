@@ -125,8 +125,8 @@ function handleMobileMenu() {
 }
 
 // Run on page load and when window is resized
-window.addEventListener('resize', toggleMobileMenuClass);
-window.addEventListener('load', toggleMobileMenuClass);
+window.addEventListener('resize', handleMobileMenu);
+window.addEventListener('load', handleMobileMenu);
 </script>
 {% schema %}
 {
