@@ -40,7 +40,7 @@
         "button"
       ],
       "settings": {
-        "banner": "shopify://shop_images/image-default.png",
+        "banner": "shopify://shop_images/banner__bg.jpg",
         "padding_top": 0,
         "padding_bottom": 0
       }
