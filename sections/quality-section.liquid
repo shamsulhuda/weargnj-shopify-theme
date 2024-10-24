@@ -21,6 +21,27 @@
         </div>
     </div>
 </div>
+<style>
+  @media only screen and (max-width: 768px) {
+    .feature__wrapper {
+        display: flex; /* Ensure items are aligned horizontally */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-behavior: smooth; /* Optional: for smooth scrolling */
+        white-space: nowrap; /* Prevent wrapping of the items */
+        width: 100%; /* Ensure it takes the full width of the mobile screen */
+    }
+    
+    .feature__bloc {
+        display: inline-block; /* Keep items inline for horizontal scrolling */
+        min-width: 250px; /* Adjust the width as per design needs */
+        padding: 10px; /* Optional: to give some space between items */
+    }
+
+    .feature__wrapper::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for better UI experience */
+    }
+}
+</style>
 {% schema %}
   {
     "name": "Quality Section",
