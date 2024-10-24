@@ -896,7 +896,7 @@ img {
   display: block;
   font-weight: 400;
 }
-.weargnj__banner .banner__content .banner__description {
+.weargnj__banner .banner__content .banner__description p{
   max-width: 600px;
   color: var(--common-white);
   line-height: 32px;
