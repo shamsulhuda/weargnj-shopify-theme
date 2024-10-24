@@ -85,7 +85,7 @@
           speed:1000,
           loop:true,
           autoplay: {
-            delay: 500,
+            delay: 700,
           }
         })
 
