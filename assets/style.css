@@ -491,6 +491,9 @@ img {
 }
 
 /* ====== header =======*/
+.main-header{
+  position: relative;
+}
 .weargnj__offer {
   padding: 9px 0;
   border-radius: 8px;
