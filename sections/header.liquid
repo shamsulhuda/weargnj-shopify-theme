@@ -84,29 +84,6 @@
           </div>
       </div>
   </div>
-<!-- 
-  <div class="menu__block mobile d-none">                
-      <div class="weargnj__main__menu">
-          <nav>
-              <ul class="list-unstyled d-flex">
-                {% for link in links %}
-                  <li class="{% if forloop.index == button_index and button_index != blank %} special__text{% endif %}"{% if link.links.size > 1 %} dropdown{% endif %}>
-                    <a href="{{ link.url }}" class="{% if link.links.size > 1 %} dropdown-toggle{% endif %}" href="{{ link.url }}" {% if link.links.size > 1 %} id="navbarDropdown_{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>
-                      {{ link.title }} {% if forloop.index == button_index and button_index != blank %}<span>{{ custom_txt }}</span>{% endif %}
-                    </a>
-                    {% if link.links.size > 1 %}
-                    <ul class="dropdown-menu d-none" aria-labelledby="navbarDropdown_{{ forloop.index }}">
-                      {% for child in link.links %}
-                      <li><a class="dropdown-item" href="{{ child.url }}">{{ child.title }}</a></li>
-                      {% endfor %}
-                    </ul>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-          </nav>
-      </div>
-  </div> -->
   <!-- Mobile menu -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
