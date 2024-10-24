@@ -124,6 +124,8 @@ function toggleMobileMenuClass() {
     menuBlock.classList.remove('mobileMenu');
   }
 }
+  window.addEventListener('resize', toggleMobileMenuClass);
+  window.addEventListener('load', toggleMobileMenuClass);
 </script>
 {% schema %}
 {
