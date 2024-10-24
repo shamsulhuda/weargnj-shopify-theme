@@ -12,7 +12,7 @@
             <div class="feature__wrapper">
               {% for block in section.blocks %}
                 {% assign size = block.settings.size | default: 24 %}
-                <div class="swiper-slide">
+                <div class="swiper-slide feature__bloc">
                     {% render 'icons', icon: block.settings.icon, size: size %}  
                     <span>{{ block.settings.text }}</span>
                 </div>
