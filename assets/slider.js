@@ -85,7 +85,8 @@
           speed:1500,
           loop:true,
           autoplay: {
-            delay: 1000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
           }
         })
 
