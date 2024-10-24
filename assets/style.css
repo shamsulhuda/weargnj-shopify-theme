@@ -827,13 +827,24 @@ img {
   }
 }
 @media (max-width: 1024px){
-  .menu__block.mobileMenu {
-    position: absolute;
-    width: 768px;
-    max-width: 790px;
-    overflow-x: auto; /* Use auto to enable scroll when necessary */
-    white-space: nowrap; /* Prevent child elements from wrapping */
-  }
+   .menu__block.mobileMenu {
+        position: absolute; /* Keeps the menu absolutely positioned */
+        width: 100%; /* Occupies full width */
+        top: 0; /* Adjust as needed */
+        left: 0; /* Adjust as needed */
+        overflow: hidden; /* Prevent scrolling of the whole menu block */
+    }
+
+    .weargnj__main__menu {
+        display: inline-block;
+        width: max-content; /* Ensures it can exceed its container width for scrolling */
+        overflow-x: auto; /* Enable horizontal scrolling for the inner menu */
+        white-space: nowrap; /* Prevent wrapping of menu items to the next line */
+    }
+
+    .weargnj__main__menu > * {
+        display: inline-block; /* Ensures menu items are aligned horizontally */
+    }
 
   .menu__block.mobileMenu > * {
       display: inline-block; /* Make sure child elements are inline to enable horizontal scrolling */
